@@ -25,7 +25,7 @@ namespace SafiRepay.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.171.133:8000/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.171.134:8000/")]
         public string routeApi {
             get {
                 return ((string)(this["routeApi"]));
