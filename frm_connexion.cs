@@ -50,9 +50,9 @@ namespace SafiRepay
                 Employee userWantsConnection = Employee.auth(username, pwd);
                 if (userWantsConnection != null)
                 {
-                    Global.connectedEmployee = userWantsConnection;
-                    MaterialForm dashboard = new frm_admin(userWantsConnection);
-                    dashboard.Show();
+                        Global.connectedEmployee = userWantsConnection;
+                        MaterialForm dashboard = new frm_utilisateur(userWantsConnection);
+                        dashboard.Show();
                 }
             }
             catch

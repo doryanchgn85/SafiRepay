@@ -32,6 +32,8 @@
             this.tbp_accueil = new System.Windows.Forms.TabPage();
             this.lbl_nbFraisValidesSupprimesDernieresSemaines = new MaterialSkin.Controls.MaterialLabel();
             this.tbp_parametresForfait = new System.Windows.Forms.TabPage();
+            this.btn_Anul = new System.Windows.Forms.Button();
+            this.btn_Valid = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_modifierParametresForfait = new System.Windows.Forms.Button();
             this.tbx_kilometrage = new System.Windows.Forms.TextBox();
@@ -80,8 +82,6 @@
             this.tbx_prenomUtilisateur = new System.Windows.Forms.TextBox();
             this.tbs_utilisateur = new MaterialSkin.Controls.MaterialTabSelector();
             this.btn_deconnexion = new System.Windows.Forms.Button();
-            this.btn_Valid = new System.Windows.Forms.Button();
-            this.btn_Anul = new System.Windows.Forms.Button();
             this.tbc_utilisateur.SuspendLayout();
             this.tbp_accueil.SuspendLayout();
             this.tbp_parametresForfait.SuspendLayout();
@@ -158,6 +158,30 @@
             this.tbp_parametresForfait.TabIndex = 1;
             this.tbp_parametresForfait.Text = "Paramètres forfait";
             this.tbp_parametresForfait.UseVisualStyleBackColor = true;
+            // 
+            // btn_Anul
+            // 
+            this.btn_Anul.BackColor = System.Drawing.Color.Red;
+            this.btn_Anul.Location = new System.Drawing.Point(748, 367);
+            this.btn_Anul.Name = "btn_Anul";
+            this.btn_Anul.Size = new System.Drawing.Size(38, 39);
+            this.btn_Anul.TabIndex = 16;
+            this.btn_Anul.Text = "&X";
+            this.btn_Anul.UseVisualStyleBackColor = false;
+            this.btn_Anul.Visible = false;
+            this.btn_Anul.Click += new System.EventHandler(this.btn_Anul_Click);
+            // 
+            // btn_Valid
+            // 
+            this.btn_Valid.BackColor = System.Drawing.Color.Green;
+            this.btn_Valid.Location = new System.Drawing.Point(704, 367);
+            this.btn_Valid.Name = "btn_Valid";
+            this.btn_Valid.Size = new System.Drawing.Size(38, 39);
+            this.btn_Valid.TabIndex = 15;
+            this.btn_Valid.Text = "&V";
+            this.btn_Valid.UseVisualStyleBackColor = false;
+            this.btn_Valid.Visible = false;
+            this.btn_Valid.Click += new System.EventHandler(this.btn_Valid_Click);
             // 
             // dataGridView1
             // 
@@ -649,30 +673,6 @@
             this.btn_deconnexion.Text = "Déconnexion";
             this.btn_deconnexion.UseVisualStyleBackColor = true;
             this.btn_deconnexion.Click += new System.EventHandler(this.Btn_deconnexion_Click);
-            // 
-            // btn_Valid
-            // 
-            this.btn_Valid.BackColor = System.Drawing.Color.Green;
-            this.btn_Valid.Location = new System.Drawing.Point(704, 367);
-            this.btn_Valid.Name = "btn_Valid";
-            this.btn_Valid.Size = new System.Drawing.Size(38, 39);
-            this.btn_Valid.TabIndex = 15;
-            this.btn_Valid.Text = "&V";
-            this.btn_Valid.UseVisualStyleBackColor = false;
-            this.btn_Valid.Visible = false;
-            this.btn_Valid.Click += new System.EventHandler(this.btn_Valid_Click);
-            // 
-            // btn_Anul
-            // 
-            this.btn_Anul.BackColor = System.Drawing.Color.Red;
-            this.btn_Anul.Location = new System.Drawing.Point(748, 367);
-            this.btn_Anul.Name = "btn_Anul";
-            this.btn_Anul.Size = new System.Drawing.Size(38, 39);
-            this.btn_Anul.TabIndex = 16;
-            this.btn_Anul.Text = "&X";
-            this.btn_Anul.UseVisualStyleBackColor = false;
-            this.btn_Anul.Visible = false;
-            this.btn_Anul.Click += new System.EventHandler(this.btn_Anul_Click);
             // 
             // frm_utilisateur
             // 
