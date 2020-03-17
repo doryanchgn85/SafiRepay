@@ -32,14 +32,13 @@
             this.tbp_accueil = new System.Windows.Forms.TabPage();
             this.lbl_nbFraisValidesSupprimesDernieresSemaines = new MaterialSkin.Controls.MaterialLabel();
             this.tbp_parametresForfait = new System.Windows.Forms.TabPage();
-            this.btn_Anul = new System.Windows.Forms.Button();
-            this.btn_Valid = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_modifierParametresForfait = new System.Windows.Forms.Button();
-            this.tbx_kilometrage = new System.Windows.Forms.TextBox();
-            this.tbx_nuitee = new System.Windows.Forms.TextBox();
-            this.tbx_relaisEtapes = new System.Windows.Forms.TextBox();
-            this.tbx_repasMidi = new System.Windows.Forms.TextBox();
+            this.btn_Cancel = new System.Windows.Forms.Button();
+            this.btn_Confirm = new System.Windows.Forms.Button();
+            this.btn_modifyParamsSheet = new System.Windows.Forms.Button();
+            this.tbx_kms = new System.Windows.Forms.TextBox();
+            this.tbx_overnight = new System.Windows.Forms.TextBox();
+            this.tbx_relayStages = new System.Windows.Forms.TextBox();
+            this.tbx_middayMeal = new System.Windows.Forms.TextBox();
             this.lbl_euroParRepas = new MaterialSkin.Controls.MaterialLabel();
             this.lbl_euroParNuitRelaisEtapes = new MaterialSkin.Controls.MaterialLabel();
             this.lbl_euroParNuitNuitee = new MaterialSkin.Controls.MaterialLabel();
@@ -82,10 +81,12 @@
             this.tbx_prenomUtilisateur = new System.Windows.Forms.TextBox();
             this.tbs_utilisateur = new MaterialSkin.Controls.MaterialTabSelector();
             this.btn_deconnexion = new System.Windows.Forms.Button();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.tbx_login = new System.Windows.Forms.TextBox();
+            this.tbx_nbAccount = new System.Windows.Forms.TextBox();
             this.tbc_utilisateur.SuspendLayout();
             this.tbp_accueil.SuspendLayout();
             this.tbp_parametresForfait.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tbp_controleFrais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_deplacement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_relaisEtape)).BeginInit();
@@ -134,14 +135,13 @@
             // 
             // tbp_parametresForfait
             // 
-            this.tbp_parametresForfait.Controls.Add(this.btn_Anul);
-            this.tbp_parametresForfait.Controls.Add(this.btn_Valid);
-            this.tbp_parametresForfait.Controls.Add(this.dataGridView1);
-            this.tbp_parametresForfait.Controls.Add(this.btn_modifierParametresForfait);
-            this.tbp_parametresForfait.Controls.Add(this.tbx_kilometrage);
-            this.tbp_parametresForfait.Controls.Add(this.tbx_nuitee);
-            this.tbp_parametresForfait.Controls.Add(this.tbx_relaisEtapes);
-            this.tbp_parametresForfait.Controls.Add(this.tbx_repasMidi);
+            this.tbp_parametresForfait.Controls.Add(this.btn_Cancel);
+            this.tbp_parametresForfait.Controls.Add(this.btn_Confirm);
+            this.tbp_parametresForfait.Controls.Add(this.btn_modifyParamsSheet);
+            this.tbp_parametresForfait.Controls.Add(this.tbx_kms);
+            this.tbp_parametresForfait.Controls.Add(this.tbx_overnight);
+            this.tbp_parametresForfait.Controls.Add(this.tbx_relayStages);
+            this.tbp_parametresForfait.Controls.Add(this.tbx_middayMeal);
             this.tbp_parametresForfait.Controls.Add(this.lbl_euroParRepas);
             this.tbp_parametresForfait.Controls.Add(this.lbl_euroParNuitRelaisEtapes);
             this.tbp_parametresForfait.Controls.Add(this.lbl_euroParNuitNuitee);
@@ -159,76 +159,68 @@
             this.tbp_parametresForfait.Text = "Paramètres forfait";
             this.tbp_parametresForfait.UseVisualStyleBackColor = true;
             // 
-            // btn_Anul
+            // btn_Cancel
             // 
-            this.btn_Anul.BackColor = System.Drawing.Color.Red;
-            this.btn_Anul.Location = new System.Drawing.Point(748, 367);
-            this.btn_Anul.Name = "btn_Anul";
-            this.btn_Anul.Size = new System.Drawing.Size(38, 39);
-            this.btn_Anul.TabIndex = 16;
-            this.btn_Anul.Text = "&X";
-            this.btn_Anul.UseVisualStyleBackColor = false;
-            this.btn_Anul.Visible = false;
-            this.btn_Anul.Click += new System.EventHandler(this.btn_Anul_Click);
+            this.btn_Cancel.BackColor = System.Drawing.Color.Red;
+            this.btn_Cancel.Location = new System.Drawing.Point(748, 367);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(38, 39);
+            this.btn_Cancel.TabIndex = 16;
+            this.btn_Cancel.Text = "&X";
+            this.btn_Cancel.UseVisualStyleBackColor = false;
+            this.btn_Cancel.Visible = false;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Anul_Click);
             // 
-            // btn_Valid
+            // btn_Confirm
             // 
-            this.btn_Valid.BackColor = System.Drawing.Color.Green;
-            this.btn_Valid.Location = new System.Drawing.Point(704, 367);
-            this.btn_Valid.Name = "btn_Valid";
-            this.btn_Valid.Size = new System.Drawing.Size(38, 39);
-            this.btn_Valid.TabIndex = 15;
-            this.btn_Valid.Text = "&V";
-            this.btn_Valid.UseVisualStyleBackColor = false;
-            this.btn_Valid.Visible = false;
-            this.btn_Valid.Click += new System.EventHandler(this.btn_Valid_Click);
+            this.btn_Confirm.BackColor = System.Drawing.Color.Green;
+            this.btn_Confirm.Location = new System.Drawing.Point(704, 367);
+            this.btn_Confirm.Name = "btn_Confirm";
+            this.btn_Confirm.Size = new System.Drawing.Size(38, 39);
+            this.btn_Confirm.TabIndex = 15;
+            this.btn_Confirm.Text = "&V";
+            this.btn_Confirm.UseVisualStyleBackColor = false;
+            this.btn_Confirm.Visible = false;
+            this.btn_Confirm.Click += new System.EventHandler(this.btn_Valid_Click);
             // 
-            // dataGridView1
+            // btn_modifyParamsSheet
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(888, 116);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 14;
+            this.btn_modifyParamsSheet.Location = new System.Drawing.Point(536, 361);
+            this.btn_modifyParamsSheet.Name = "btn_modifyParamsSheet";
+            this.btn_modifyParamsSheet.Size = new System.Drawing.Size(131, 51);
+            this.btn_modifyParamsSheet.TabIndex = 13;
+            this.btn_modifyParamsSheet.Text = "Modifier";
+            this.btn_modifyParamsSheet.UseVisualStyleBackColor = true;
+            this.btn_modifyParamsSheet.Click += new System.EventHandler(this.btn_modifierParametresForfait_Click);
             // 
-            // btn_modifierParametresForfait
+            // tbx_kms
             // 
-            this.btn_modifierParametresForfait.Location = new System.Drawing.Point(536, 361);
-            this.btn_modifierParametresForfait.Name = "btn_modifierParametresForfait";
-            this.btn_modifierParametresForfait.Size = new System.Drawing.Size(131, 51);
-            this.btn_modifierParametresForfait.TabIndex = 13;
-            this.btn_modifierParametresForfait.Text = "Modifier";
-            this.btn_modifierParametresForfait.UseVisualStyleBackColor = true;
-            this.btn_modifierParametresForfait.Click += new System.EventHandler(this.btn_modifierParametresForfait_Click);
+            this.tbx_kms.Location = new System.Drawing.Point(558, 241);
+            this.tbx_kms.Name = "tbx_kms";
+            this.tbx_kms.Size = new System.Drawing.Size(212, 20);
+            this.tbx_kms.TabIndex = 12;
             // 
-            // tbx_kilometrage
+            // tbx_overnight
             // 
-            this.tbx_kilometrage.Location = new System.Drawing.Point(558, 241);
-            this.tbx_kilometrage.Name = "tbx_kilometrage";
-            this.tbx_kilometrage.Size = new System.Drawing.Size(212, 20);
-            this.tbx_kilometrage.TabIndex = 12;
+            this.tbx_overnight.Location = new System.Drawing.Point(558, 202);
+            this.tbx_overnight.Name = "tbx_overnight";
+            this.tbx_overnight.Size = new System.Drawing.Size(212, 20);
+            this.tbx_overnight.TabIndex = 11;
             // 
-            // tbx_nuitee
+            // tbx_relayStages
             // 
-            this.tbx_nuitee.Location = new System.Drawing.Point(558, 202);
-            this.tbx_nuitee.Name = "tbx_nuitee";
-            this.tbx_nuitee.Size = new System.Drawing.Size(212, 20);
-            this.tbx_nuitee.TabIndex = 11;
+            this.tbx_relayStages.Location = new System.Drawing.Point(558, 164);
+            this.tbx_relayStages.Name = "tbx_relayStages";
+            this.tbx_relayStages.Size = new System.Drawing.Size(212, 20);
+            this.tbx_relayStages.TabIndex = 10;
             // 
-            // tbx_relaisEtapes
+            // tbx_middayMeal
             // 
-            this.tbx_relaisEtapes.Location = new System.Drawing.Point(558, 164);
-            this.tbx_relaisEtapes.Name = "tbx_relaisEtapes";
-            this.tbx_relaisEtapes.Size = new System.Drawing.Size(212, 20);
-            this.tbx_relaisEtapes.TabIndex = 10;
-            // 
-            // tbx_repasMidi
-            // 
-            this.tbx_repasMidi.Location = new System.Drawing.Point(558, 129);
-            this.tbx_repasMidi.Name = "tbx_repasMidi";
-            this.tbx_repasMidi.Size = new System.Drawing.Size(212, 20);
-            this.tbx_repasMidi.TabIndex = 9;
-            this.tbx_repasMidi.TextChanged += new System.EventHandler(this.Tbx_repasMidi_TextChanged);
+            this.tbx_middayMeal.Location = new System.Drawing.Point(558, 129);
+            this.tbx_middayMeal.Name = "tbx_middayMeal";
+            this.tbx_middayMeal.Size = new System.Drawing.Size(212, 20);
+            this.tbx_middayMeal.TabIndex = 9;
+            this.tbx_middayMeal.TextChanged += new System.EventHandler(this.Tbx_repasMidi_TextChanged);
             // 
             // lbl_euroParRepas
             // 
@@ -569,6 +561,9 @@
             // 
             // tbp_profil
             // 
+            this.tbp_profil.Controls.Add(this.tbx_nbAccount);
+            this.tbp_profil.Controls.Add(this.tbx_login);
+            this.tbp_profil.Controls.Add(this.materialLabel1);
             this.tbp_profil.Controls.Add(this.btn_modifierMotDePasseProfil);
             this.tbp_profil.Controls.Add(this.lbl_telephone);
             this.tbp_profil.Controls.Add(this.lbl_nom);
@@ -674,6 +669,34 @@
             this.btn_deconnexion.UseVisualStyleBackColor = true;
             this.btn_deconnexion.Click += new System.EventHandler(this.Btn_deconnexion_Click);
             // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(680, 197);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(54, 19);
+            this.materialLabel1.TabIndex = 9;
+            this.materialLabel1.Text = "Login :";
+            // 
+            // tbx_login
+            // 
+            this.tbx_login.Location = new System.Drawing.Point(793, 198);
+            this.tbx_login.Name = "tbx_login";
+            this.tbx_login.Size = new System.Drawing.Size(254, 20);
+            this.tbx_login.TabIndex = 10;
+            // 
+            // tbx_nbAccount
+            // 
+            this.tbx_nbAccount.Location = new System.Drawing.Point(1244, 6);
+            this.tbx_nbAccount.Name = "tbx_nbAccount";
+            this.tbx_nbAccount.Size = new System.Drawing.Size(30, 20);
+            this.tbx_nbAccount.TabIndex = 11;
+            this.tbx_nbAccount.Visible = false;
+            // 
             // frm_utilisateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -693,7 +716,6 @@
             this.tbp_accueil.PerformLayout();
             this.tbp_parametresForfait.ResumeLayout(false);
             this.tbp_parametresForfait.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tbp_controleFrais.ResumeLayout(false);
             this.tbp_controleFrais.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_deplacement)).EndInit();
@@ -715,10 +737,10 @@
         private System.Windows.Forms.TabPage tbp_controleFrais;
         private System.Windows.Forms.TabPage tbp_profil;
         private System.Windows.Forms.Button btn_deconnexion;
-        private System.Windows.Forms.TextBox tbx_kilometrage;
-        private System.Windows.Forms.TextBox tbx_nuitee;
-        private System.Windows.Forms.TextBox tbx_relaisEtapes;
-        private System.Windows.Forms.TextBox tbx_repasMidi;
+        private System.Windows.Forms.TextBox tbx_kms;
+        private System.Windows.Forms.TextBox tbx_overnight;
+        private System.Windows.Forms.TextBox tbx_relayStages;
+        private System.Windows.Forms.TextBox tbx_middayMeal;
         private MaterialSkin.Controls.MaterialLabel lbl_euroParRepas;
         private MaterialSkin.Controls.MaterialLabel lbl_euroParNuitRelaisEtapes;
         private MaterialSkin.Controls.MaterialLabel lbl_euroParNuitNuitee;
@@ -728,7 +750,7 @@
         private MaterialSkin.Controls.MaterialLabel lbl_deplacement;
         private MaterialSkin.Controls.MaterialLabel lbl_kilometrage;
         private MaterialSkin.Controls.MaterialLabel lbl_repasMidi;
-        private System.Windows.Forms.Button btn_modifierParametresForfait;
+        private System.Windows.Forms.Button btn_modifyParamsSheet;
         private MaterialSkin.Controls.MaterialLabel lbl_telephone;
         private MaterialSkin.Controls.MaterialLabel lbl_nom;
         private MaterialSkin.Controls.MaterialLabel lbl_prenom;
@@ -759,8 +781,10 @@
         private MaterialSkin.Controls.MaterialLabel lbl_nuiteeControleDesFrais;
         private MaterialSkin.Controls.MaterialLabel lbl_RelaisEtapeControleDesFrais;
         private MaterialSkin.Controls.MaterialLabel lbl_repasMidiControleDesFrais;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btn_Valid;
-        private System.Windows.Forms.Button btn_Anul;
+        private System.Windows.Forms.Button btn_Confirm;
+        private System.Windows.Forms.Button btn_Cancel;
+        private System.Windows.Forms.TextBox tbx_login;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private System.Windows.Forms.TextBox tbx_nbAccount;
     }
 }

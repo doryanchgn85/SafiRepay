@@ -11,24 +11,35 @@ namespace SafiRepay.RAO
     class PackageType
     {
         public string id { get; set; }
-        public string amountMax { get; set; }
+        public int employee_id { get; set; }
+        public int middayMeal { get; set; }
+        public int relayStage { get; set; }
+        public int overnight { get; set; }
+        public int kms { get; set; }
+        public DateTime date { get; set; }
         public string name { get; set; }
         public List<PackageType> data { get; set; }
 
-        public static List<PackageType> showPrices()
+        public static PackageType getPackageType(int employee_id)
         {
-            JObject jsonParse = JObject.Parse(RAO.get("price"));
-            if (jsonParse["name"].ToString().Length == 0)
+            JObject jsonParse = JObject.Parse(RAO.post("packageType", "employee_id=" + employee_id));
+            if (employee_id.ToString().Length > 0)
             {
-                List<PackageType> listes = new List<PackageType>();
-                JArray jsonData = jsonParse["data"].ToObject<JArray>();
-                List<PackageType> stringtest = JsonConvert.DeserializeObject<List<PackageType>>(jsonData.ToString());
+                return JsonConvert.DeserializeObject<PackageType>(jsonParse.ToString());
+            }
+            else
+            {
+                return null;
+            }
+        }
 
-                foreach (PackageType onePackageType in stringtest)
-                {
-                    listes.Add(onePackageType);
-                }
-                return listes;
+        public static PackageType modifyPackageType(int employee_id, int middayMeal, int relayStage, int overnight, int kms)
+        {
+            JObject jsonParse = JObject.Parse(RAO.put("modifyPackageType", "employee_id=" + employee_id + "&middayMeal=" + middayMeal +
+                "&relayStage=" + relayStage + "&overnight=" + overnight + "&kms=" + kms));
+            if(employee_id.ToString().Length > 0)
+            {
+                return JsonConvert.DeserializeObject<PackageType>(jsonParse.ToString());
             }
             else
             {

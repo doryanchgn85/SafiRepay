@@ -34,12 +34,12 @@ namespace SafiRepay
 
             tbx_prenomUtilisateur.Enabled = false;
             tbx_nomUtilisateur.Enabled = false;
-            tbx_repasMidi.Enabled = false;
+            tbx_middayMeal.Enabled = false;
 
-            tbx_repasMidi.Enabled = false;
-            tbx_relaisEtapes.Enabled = false;
-            tbx_nuitee.Enabled = false;
-            tbx_kilometrage.Enabled = false;
+            tbx_middayMeal.Enabled = false;
+            tbx_relayStages.Enabled = false;
+            tbx_overnight.Enabled = false;
+            tbx_kms.Enabled = false;
 
             if (user != null)
             {
@@ -51,16 +51,25 @@ namespace SafiRepay
 
                 tbx_telUtilisateur.Text = user.phone;
                 this.oneUser = user;
+
+                tbx_login.Text = user.login;
+                this.oneUser = user;
+
+                tbx_nbAccount.Text = user.id;
+                this.oneUser = user;
             }
         }
 
         private void Frm_utilisateur_Load(object sender, EventArgs e)
         {
-            /*List<PackageType> packageType = PackageType.showPrices();
-            foreach(PackageType OnePackageType in packageType)
-            {
-                dataGridView1.Rows.Add(OnePackageType.name, OnePackageType.amountMax);
-            }*/
+            int employee_id = Convert.ToInt32(tbx_nbAccount.Text);
+            PackageType getPackageType = PackageType.getPackageType(employee_id);
+
+            tbx_middayMeal.Text = Convert.ToString(getPackageType   .middayMeal);
+            tbx_relayStages.Text = Convert.ToString(getPackageType.relayStage);
+            tbx_overnight.Text = Convert.ToString(getPackageType.overnight);
+            tbx_kms.Text = Convert.ToString(getPackageType.kms);
+
         }
 
         private void Btn_deconnexion_Click(object sender, EventArgs e)
@@ -81,35 +90,45 @@ namespace SafiRepay
 
         private void btn_modifierParametresForfait_Click(object sender, EventArgs e)
         {
-            tbx_repasMidi.Enabled = true;
-            tbx_relaisEtapes.Enabled = true;
-            tbx_nuitee.Enabled = true;
-            tbx_kilometrage.Enabled = true;
+            tbx_middayMeal.Enabled = true;
+            tbx_relayStages.Enabled = true;
+            tbx_overnight.Enabled = true;
+            tbx_kms.Enabled = true;
 
-            btn_Anul.Visible = true;
-            btn_Valid.Visible = true;
+            btn_Cancel.Visible = true;
+            btn_Confirm.Visible = true;
         }
 
         private void btn_Valid_Click(object sender, EventArgs e)
         {
-            btn_Anul.Visible = false;
-            btn_Valid.Visible = false;
+            btn_Cancel.Visible = false;
+            btn_Confirm.Visible = false;
 
-            tbx_repasMidi.Enabled = false;
-            tbx_relaisEtapes.Enabled = false;
-            tbx_nuitee.Enabled = false;
-            tbx_kilometrage.Enabled = false;
+            tbx_middayMeal.Enabled = false;
+            tbx_relayStages.Enabled = false;
+            tbx_overnight.Enabled = false;
+            tbx_kms.Enabled = false;
+
+            int middayMeal = Convert.ToInt32(tbx_middayMeal.Text);
+            int relayStage = Convert.ToInt32(tbx_relayStages.Text);
+            int overnight = Convert.ToInt32(tbx_overnight.Text);
+            int kms = Convert.ToInt32(tbx_kms.Text);
+
+            int employee_id = Convert.ToInt32(tbx_nbAccount.Text);
+            PackageType modifyValues = PackageType.modifyPackageType(employee_id, middayMeal, relayStage, overnight, kms);
+
+            MessageBox.Show("Modifications prises en compte.");
         }
 
         private void btn_Anul_Click(object sender, EventArgs e)
         {
-            btn_Anul.Visible = false;
-            btn_Valid.Visible = false;
+            btn_Cancel.Visible = false;
+            btn_Confirm.Visible = false;
 
-            tbx_repasMidi.Enabled = false;
-            tbx_relaisEtapes.Enabled = false;
-            tbx_nuitee.Enabled = false;
-            tbx_kilometrage.Enabled = false;
+            tbx_middayMeal.Enabled = false;
+            tbx_relayStages.Enabled = false;
+            tbx_overnight.Enabled = false;
+            tbx_kms.Enabled = false;
         }
     }
 }
