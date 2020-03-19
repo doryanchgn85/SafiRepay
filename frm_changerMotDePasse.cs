@@ -19,8 +19,8 @@ namespace SafiRepay
         {
             InitializeComponent();
 
-            tbx_ancienMotDePasse.PasswordChar = '*';
-            tbx_nouveauMotDePasse.PasswordChar = '*';
+            tbx_oldPwd.PasswordChar = '*';
+            tbx_newPwd.PasswordChar = '*';
 
             // Create a material theme manager and add the form to manage (this)
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
@@ -42,8 +42,8 @@ namespace SafiRepay
 
         private void Btn_valider_Click(object sender, EventArgs e)
         {
-            string oldpass = tbx_ancienMotDePasse.Text.Trim();
-            string newpass = tbx_nouveauMotDePasse.Text.Trim();
+            string oldpass = tbx_oldPwd.Text.Trim();
+            string newpass = tbx_newPwd.Text.Trim();
 
 
             if (oldpass != null)

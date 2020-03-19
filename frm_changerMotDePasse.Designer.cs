@@ -30,10 +30,11 @@
         {
             this.lbl_ancienMotDePasse = new MaterialSkin.Controls.MaterialLabel();
             this.lbl_nouveauMotDePasse = new MaterialSkin.Controls.MaterialLabel();
-            this.tbx_ancienMotDePasse = new System.Windows.Forms.TextBox();
-            this.tbx_nouveauMotDePasse = new System.Windows.Forms.TextBox();
-            this.btn_valider = new System.Windows.Forms.Button();
-            this.lbl_changerSonMotDePasse = new MaterialSkin.Controls.MaterialLabel();
+            this.tbx_oldPwd = new System.Windows.Forms.TextBox();
+            this.tbx_newPwd = new System.Windows.Forms.TextBox();
+            this.btn_confirm = new System.Windows.Forms.Button();
+            this.tbx_confirmPwd = new System.Windows.Forms.TextBox();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // lbl_ancienMotDePasse
@@ -47,7 +48,7 @@
             this.lbl_ancienMotDePasse.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_ancienMotDePasse.Name = "lbl_ancienMotDePasse";
             this.lbl_ancienMotDePasse.Size = new System.Drawing.Size(158, 19);
-            this.lbl_ancienMotDePasse.TabIndex = 0;
+            this.lbl_ancienMotDePasse.TabIndex = 6;
             this.lbl_ancienMotDePasse.Text = "Ancien mot de passe :";
             // 
             // lbl_nouveauMotDePasse
@@ -61,56 +62,64 @@
             this.lbl_nouveauMotDePasse.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_nouveauMotDePasse.Name = "lbl_nouveauMotDePasse";
             this.lbl_nouveauMotDePasse.Size = new System.Drawing.Size(171, 19);
-            this.lbl_nouveauMotDePasse.TabIndex = 1;
+            this.lbl_nouveauMotDePasse.TabIndex = 5;
             this.lbl_nouveauMotDePasse.Text = "Nouveau mot de passe :";
             // 
-            // tbx_ancienMotDePasse
+            // tbx_oldPwd
             // 
-            this.tbx_ancienMotDePasse.Location = new System.Drawing.Point(232, 189);
-            this.tbx_ancienMotDePasse.Name = "tbx_ancienMotDePasse";
-            this.tbx_ancienMotDePasse.Size = new System.Drawing.Size(175, 20);
-            this.tbx_ancienMotDePasse.TabIndex = 2;
+            this.tbx_oldPwd.Location = new System.Drawing.Point(232, 189);
+            this.tbx_oldPwd.Name = "tbx_oldPwd";
+            this.tbx_oldPwd.Size = new System.Drawing.Size(175, 20);
+            this.tbx_oldPwd.TabIndex = 0;
             // 
-            // tbx_nouveauMotDePasse
+            // tbx_newPwd
             // 
-            this.tbx_nouveauMotDePasse.Location = new System.Drawing.Point(232, 236);
-            this.tbx_nouveauMotDePasse.Name = "tbx_nouveauMotDePasse";
-            this.tbx_nouveauMotDePasse.Size = new System.Drawing.Size(175, 20);
-            this.tbx_nouveauMotDePasse.TabIndex = 3;
+            this.tbx_newPwd.Location = new System.Drawing.Point(232, 236);
+            this.tbx_newPwd.Name = "tbx_newPwd";
+            this.tbx_newPwd.Size = new System.Drawing.Size(175, 20);
+            this.tbx_newPwd.TabIndex = 1;
             // 
-            // btn_valider
+            // btn_confirm
             // 
-            this.btn_valider.Location = new System.Drawing.Point(159, 341);
-            this.btn_valider.Name = "btn_valider";
-            this.btn_valider.Size = new System.Drawing.Size(110, 60);
-            this.btn_valider.TabIndex = 4;
-            this.btn_valider.Text = "VALIDER";
-            this.btn_valider.UseVisualStyleBackColor = true;
-            this.btn_valider.Click += new System.EventHandler(this.Btn_valider_Click);
+            this.btn_confirm.Location = new System.Drawing.Point(159, 341);
+            this.btn_confirm.Name = "btn_confirm";
+            this.btn_confirm.Size = new System.Drawing.Size(110, 60);
+            this.btn_confirm.TabIndex = 3;
+            this.btn_confirm.Text = "VALIDER";
+            this.btn_confirm.UseVisualStyleBackColor = true;
+            this.btn_confirm.Click += new System.EventHandler(this.Btn_valider_Click);
             // 
-            // lbl_changerSonMotDePasse
+            // tbx_confirmPwd
             // 
-            this.lbl_changerSonMotDePasse.AutoSize = true;
-            this.lbl_changerSonMotDePasse.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_changerSonMotDePasse.Depth = 0;
-            this.lbl_changerSonMotDePasse.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lbl_changerSonMotDePasse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_changerSonMotDePasse.Location = new System.Drawing.Point(-4, 95);
-            this.lbl_changerSonMotDePasse.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lbl_changerSonMotDePasse.Name = "lbl_changerSonMotDePasse";
-            this.lbl_changerSonMotDePasse.Size = new System.Drawing.Size(222, 19);
-            this.lbl_changerSonMotDePasse.TabIndex = 5;
-            this.lbl_changerSonMotDePasse.Text = "CHANGER SON MOT DE PASSE";
+            this.tbx_confirmPwd.Location = new System.Drawing.Point(232, 281);
+            this.tbx_confirmPwd.Name = "tbx_confirmPwd";
+            this.tbx_confirmPwd.Size = new System.Drawing.Size(175, 20);
+            this.tbx_confirmPwd.TabIndex = 2;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(44, 280);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(105, 19);
+            this.materialLabel1.TabIndex = 4;
+            this.materialLabel1.Text = "Confirmation :";
             // 
             // frm_changerMotDePasse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 450);
-            this.Controls.Add(this.lbl_changerSonMotDePasse);
-            this.Controls.Add(this.btn_valider);
-            this.Controls.Add(this.tbx_nouveauMotDePasse);
-            this.Controls.Add(this.tbx_ancienMotDePasse);
+            this.Controls.Add(this.tbx_confirmPwd);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.btn_confirm);
+            this.Controls.Add(this.tbx_newPwd);
+            this.Controls.Add(this.tbx_oldPwd);
             this.Controls.Add(this.lbl_nouveauMotDePasse);
             this.Controls.Add(this.lbl_ancienMotDePasse);
             this.MaximizeBox = false;
@@ -128,9 +137,10 @@
 
         private MaterialSkin.Controls.MaterialLabel lbl_ancienMotDePasse;
         private MaterialSkin.Controls.MaterialLabel lbl_nouveauMotDePasse;
-        private System.Windows.Forms.TextBox tbx_ancienMotDePasse;
-        private System.Windows.Forms.TextBox tbx_nouveauMotDePasse;
-        private System.Windows.Forms.Button btn_valider;
-        private MaterialSkin.Controls.MaterialLabel lbl_changerSonMotDePasse;
+        private System.Windows.Forms.TextBox tbx_oldPwd;
+        private System.Windows.Forms.TextBox tbx_newPwd;
+        private System.Windows.Forms.Button btn_confirm;
+        private System.Windows.Forms.TextBox tbx_confirmPwd;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

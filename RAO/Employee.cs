@@ -46,10 +46,10 @@ namespace SafiRepay.RAO
             }
         }
 
-        public static Employee createAccountEmployee(int activation, String lastname, String firstname, String pwd, String login, String address, String PC, String city, String phone, String hireDateDay, String hireDateMonth, String hireDateYear, int district)
+        public static Employee createAccountEmployee(int activation, String lastname, String firstname, String pwd, String login, String address, String PC, String city, String phone, String hireDateDay, String hireDateMonth, String hireDateYear, int district, int employee_type_id)
         {
             JObject jsonParse = JObject.Parse(RAO.post("createAccountEmployee", "activation=" + activation + "&firstname=" + firstname + "&lastname=" + lastname + "&password=" + pwd + "&login=" + login + 
-                "&address=" + address + "&postalCode=" + PC + "&city=" + city + "&phone=" + phone + "&hireDate=" + hireDateYear + "/" + hireDateMonth + "/" + hireDateDay + "&district_id=" + district));
+                "&address=" + address + "&postalCode=" + PC + "&city=" + city + "&phone=" + phone + "&hireDate=" + hireDateYear + "/" + hireDateMonth + "/" + hireDateDay + "&district_id=" + district + "&employee_type_id=" + employee_type_id));
             if (lastname.ToString().Length > 0)
             {
                 return JsonConvert.DeserializeObject<Employee>(jsonParse.ToString());
@@ -74,12 +74,42 @@ namespace SafiRepay.RAO
             }
         }
 
-        public static Employee modifyEmployee(String login, String lastname, String firstname, String address, String city, String postalCode, String phone, int activation)
+        public static Employee modifyEmployee(String login, String lastname, String firstname, String address, String city, String postalCode, String phone, int activation, int employee_type_id)
         {
             JObject jsonParse = JObject.Parse(RAO.put("modifyAccountEmployee", "login=" + login + "&lastname=" + lastname + "&firstname=" + firstname + "&address=" + address + 
-                "&city=" + city + "&postalCode=" + postalCode + "&phone=" + phone + "&activation=" + activation));
-            
+                "&city=" + city + "&postalCode=" + postalCode + "&phone=" + phone + "&activation=" + activation + "&employee_type_id=" + employee_type_id));
+
+
             if (lastname.ToString().Length > 0)
+            {
+                return JsonConvert.DeserializeObject<Employee>(jsonParse.ToString());
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static List<Employee> getAllEmployee()
+        {
+            JArray jsonParse = JArray.Parse(RAO.get("allAccountsEmployees"));
+
+            List<Employee> employees = new List<Employee>();
+
+            foreach (var employee in jsonParse)
+            {
+                Employee oneEmployee = JsonConvert.DeserializeObject<Employee>(employee.ToString());
+                employees.Add(oneEmployee);
+            }
+
+            return employees;
+        }
+
+        public static Employee getEmployeeTypeId(String login)
+        {
+            JObject jsonParse = JObject.Parse(RAO.post("role", "login=" + login));
+
+            if (login.ToString().Length > 0)
             {
                 return JsonConvert.DeserializeObject<Employee>(jsonParse.ToString());
             }

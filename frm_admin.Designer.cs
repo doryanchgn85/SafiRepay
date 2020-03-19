@@ -28,63 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_admin));
             this.dgv_listeComptes = new System.Windows.Forms.DataGridView();
             this.cln_nomListeComtpes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cln_prenomListeCompte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_deconnexion = new System.Windows.Forms.Button();
             this.tbc_admin = new MaterialSkin.Controls.MaterialTabControl();
             this.tpg_dashboard = new System.Windows.Forms.TabPage();
-            this.tbs_admin = new MaterialSkin.Controls.MaterialTabSelector();
-            this.tpg_accounts = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_createAccount = new System.Windows.Forms.Button();
-            this.btn_modifyAccount = new System.Windows.Forms.Button();
-            this.gbx_researchAccount = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbx_researchAccount = new System.Windows.Forms.TextBox();
-            this.btn_researchAccount = new System.Windows.Forms.Button();
+            this.tpg_accounts = new System.Windows.Forms.TabPage();
             this.gbx_createAccountEmployee = new System.Windows.Forms.GroupBox();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
-            this.btn_createAccountConfirmation = new System.Windows.Forms.Button();
-            this.cbx_activeAccount = new MaterialSkin.Controls.MaterialCheckBox();
-            this.cbx_district = new System.Windows.Forms.ComboBox();
+            this.cbx_typeAccount = new System.Windows.Forms.ComboBox();
+            this.materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
+            this.tbx_lastname = new System.Windows.Forms.TextBox();
+            this.tbx_firstname = new System.Windows.Forms.TextBox();
+            this.tbx_login = new System.Windows.Forms.TextBox();
+            this.tbx_pwd = new System.Windows.Forms.TextBox();
+            this.tbx_confirmationPwd = new System.Windows.Forms.TextBox();
+            this.tbx_address = new System.Windows.Forms.TextBox();
+            this.tbx_postalCode = new System.Windows.Forms.TextBox();
+            this.tbx_city = new System.Windows.Forms.TextBox();
+            this.tbx_phone = new System.Windows.Forms.TextBox();
             this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
             this.tbx_hireDateYear = new System.Windows.Forms.TextBox();
             this.tbx_hireDateMonth = new System.Windows.Forms.TextBox();
             this.tbx_hireDateDay = new System.Windows.Forms.TextBox();
-            this.tbx_phone = new System.Windows.Forms.TextBox();
-            this.tbx_city = new System.Windows.Forms.TextBox();
-            this.tbx_postalCode = new System.Windows.Forms.TextBox();
-            this.tbx_address = new System.Windows.Forms.TextBox();
-            this.tbx_confirmationPwd = new System.Windows.Forms.TextBox();
-            this.tbx_pwd = new System.Windows.Forms.TextBox();
-            this.tbx_login = new System.Windows.Forms.TextBox();
-            this.tbx_firstname = new System.Windows.Forms.TextBox();
-            this.tbx_lastname = new System.Windows.Forms.TextBox();
+            this.cbx_district = new System.Windows.Forms.ComboBox();
+            this.cbx_activeAccount = new MaterialSkin.Controls.MaterialCheckBox();
+            this.btn_createAccountConfirmation = new System.Windows.Forms.Button();
+            this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.gbx_researchAccount = new System.Windows.Forms.GroupBox();
+            this.btn_researchAccount = new System.Windows.Forms.Button();
+            this.tbx_researchAccount = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_modifyAccount = new System.Windows.Forms.Button();
+            this.btn_createAccount = new System.Windows.Forms.Button();
+            this.tbs_admin = new MaterialSkin.Controls.MaterialTabSelector();
             this.gbx_modifyAccountEmployee = new System.Windows.Forms.GroupBox();
             this.btn_modifyAccountEmployee = new System.Windows.Forms.Button();
+            this.materialLabel21 = new MaterialSkin.Controls.MaterialLabel();
+            this.cbx_modifyTypeAccount = new System.Windows.Forms.ComboBox();
             this.tbx_modifyHireDate = new System.Windows.Forms.TextBox();
             this.tbx_modifyPhone = new System.Windows.Forms.TextBox();
             this.tbx_modifyCity = new System.Windows.Forms.TextBox();
             this.tbx_modifyPostalCode = new System.Windows.Forms.TextBox();
             this.tbx_modifyAddress = new System.Windows.Forms.TextBox();
-            this.materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel16 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel18 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel20 = new MaterialSkin.Controls.MaterialLabel();
             this.tbx_modifyLogin = new System.Windows.Forms.TextBox();
             this.materialLabel22 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel23 = new MaterialSkin.Controls.MaterialLabel();
@@ -93,13 +98,22 @@
             this.tbx_modifyLastName = new System.Windows.Forms.TextBox();
             this.materialLabel26 = new MaterialSkin.Controls.MaterialLabel();
             this.tbx_modifyFirstname = new System.Windows.Forms.TextBox();
+            this.pbx_safiLogo = new System.Windows.Forms.PictureBox();
+            this.tpg_listAccount = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dgv_listAccount = new System.Windows.Forms.DataGridView();
+            this.clm_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clm_prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listeComptes)).BeginInit();
             this.tbc_admin.SuspendLayout();
             this.tpg_dashboard.SuspendLayout();
             this.tpg_accounts.SuspendLayout();
-            this.gbx_researchAccount.SuspendLayout();
             this.gbx_createAccountEmployee.SuspendLayout();
+            this.gbx_researchAccount.SuspendLayout();
             this.gbx_modifyAccountEmployee.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_safiLogo)).BeginInit();
+            this.tpg_listAccount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listAccount)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_listeComptes
@@ -136,6 +150,7 @@
             // 
             this.tbc_admin.Controls.Add(this.tpg_dashboard);
             this.tbc_admin.Controls.Add(this.tpg_accounts);
+            this.tbc_admin.Controls.Add(this.tpg_listAccount);
             this.tbc_admin.Depth = 0;
             this.tbc_admin.Location = new System.Drawing.Point(2, 97);
             this.tbc_admin.MouseState = MaterialSkin.MouseState.HOVER;
@@ -146,6 +161,7 @@
             // 
             // tpg_dashboard
             // 
+            this.tpg_dashboard.Controls.Add(this.pbx_safiLogo);
             this.tpg_dashboard.Controls.Add(this.label1);
             this.tpg_dashboard.Location = new System.Drawing.Point(4, 22);
             this.tpg_dashboard.Name = "tpg_dashboard";
@@ -155,15 +171,15 @@
             this.tpg_dashboard.Text = "Accueil";
             this.tpg_dashboard.UseVisualStyleBackColor = true;
             // 
-            // tbs_admin
+            // label1
             // 
-            this.tbs_admin.BaseTabControl = this.tbc_admin;
-            this.tbs_admin.Depth = 0;
-            this.tbs_admin.Location = new System.Drawing.Point(0, 64);
-            this.tbs_admin.MouseState = MaterialSkin.MouseState.HOVER;
-            this.tbs_admin.Name = "tbs_admin";
-            this.tbs_admin.Size = new System.Drawing.Size(863, 23);
-            this.tbs_admin.TabIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(195, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(437, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Bienvenue sur la page administrateur de SafiRepay";
             // 
             // tpg_accounts
             // 
@@ -180,76 +196,10 @@
             this.tpg_accounts.Text = "Les comptes";
             this.tpg_accounts.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(397, 260);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bienvenue";
-            // 
-            // btn_createAccount
-            // 
-            this.btn_createAccount.Location = new System.Drawing.Point(6, 6);
-            this.btn_createAccount.Name = "btn_createAccount";
-            this.btn_createAccount.Size = new System.Drawing.Size(199, 82);
-            this.btn_createAccount.TabIndex = 0;
-            this.btn_createAccount.Text = "CRÉER UN COMPTE";
-            this.btn_createAccount.UseVisualStyleBackColor = true;
-            this.btn_createAccount.Click += new System.EventHandler(this.btn_createAccount_Click);
-            // 
-            // btn_modifyAccount
-            // 
-            this.btn_modifyAccount.Location = new System.Drawing.Point(6, 94);
-            this.btn_modifyAccount.Name = "btn_modifyAccount";
-            this.btn_modifyAccount.Size = new System.Drawing.Size(199, 82);
-            this.btn_modifyAccount.TabIndex = 1;
-            this.btn_modifyAccount.Text = "MODIFIER UN COMPTE";
-            this.btn_modifyAccount.UseVisualStyleBackColor = true;
-            this.btn_modifyAccount.Click += new System.EventHandler(this.btn_modifyAccount_Click);
-            // 
-            // gbx_researchAccount
-            // 
-            this.gbx_researchAccount.Controls.Add(this.btn_researchAccount);
-            this.gbx_researchAccount.Controls.Add(this.tbx_researchAccount);
-            this.gbx_researchAccount.Controls.Add(this.label2);
-            this.gbx_researchAccount.Location = new System.Drawing.Point(6, 201);
-            this.gbx_researchAccount.Name = "gbx_researchAccount";
-            this.gbx_researchAccount.Size = new System.Drawing.Size(199, 155);
-            this.gbx_researchAccount.TabIndex = 2;
-            this.gbx_researchAccount.TabStop = false;
-            this.gbx_researchAccount.Text = "Rechercher le compte à modifier";
-            this.gbx_researchAccount.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Login du compte à rechercher :";
-            // 
-            // tbx_researchAccount
-            // 
-            this.tbx_researchAccount.Location = new System.Drawing.Point(20, 66);
-            this.tbx_researchAccount.Name = "tbx_researchAccount";
-            this.tbx_researchAccount.Size = new System.Drawing.Size(152, 20);
-            this.tbx_researchAccount.TabIndex = 1;
-            // 
-            // btn_researchAccount
-            // 
-            this.btn_researchAccount.Location = new System.Drawing.Point(20, 110);
-            this.btn_researchAccount.Name = "btn_researchAccount";
-            this.btn_researchAccount.Size = new System.Drawing.Size(152, 23);
-            this.btn_researchAccount.TabIndex = 2;
-            this.btn_researchAccount.Text = "RECHERCHER";
-            this.btn_researchAccount.UseVisualStyleBackColor = true;
-            this.btn_researchAccount.Click += new System.EventHandler(this.btn_researchAccount_Click);
-            // 
             // gbx_createAccountEmployee
             // 
+            this.gbx_createAccountEmployee.Controls.Add(this.cbx_typeAccount);
+            this.gbx_createAccountEmployee.Controls.Add(this.materialLabel15);
             this.gbx_createAccountEmployee.Controls.Add(this.tbx_lastname);
             this.gbx_createAccountEmployee.Controls.Add(this.tbx_firstname);
             this.gbx_createAccountEmployee.Controls.Add(this.tbx_login);
@@ -282,192 +232,147 @@
             this.gbx_createAccountEmployee.Location = new System.Drawing.Point(211, 6);
             this.gbx_createAccountEmployee.Name = "gbx_createAccountEmployee";
             this.gbx_createAccountEmployee.Size = new System.Drawing.Size(632, 520);
-            this.gbx_createAccountEmployee.TabIndex = 3;
+            this.gbx_createAccountEmployee.TabIndex = 6;
             this.gbx_createAccountEmployee.TabStop = false;
             this.gbx_createAccountEmployee.Text = "Créer un compte employé";
             this.gbx_createAccountEmployee.Visible = false;
             // 
-            // materialLabel1
+            // cbx_typeAccount
             // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(26, 33);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(50, 19);
-            this.materialLabel1.TabIndex = 0;
-            this.materialLabel1.Text = "Nom :";
+            this.cbx_typeAccount.FormattingEnabled = true;
+            this.cbx_typeAccount.Items.AddRange(new object[] {
+            "Visiteur médical",
+            "Délégué régional",
+            "Responsable Secteur"});
+            this.cbx_typeAccount.Location = new System.Drawing.Point(475, 332);
+            this.cbx_typeAccount.Name = "cbx_typeAccount";
+            this.cbx_typeAccount.Size = new System.Drawing.Size(151, 21);
+            this.cbx_typeAccount.TabIndex = 14;
             // 
-            // materialLabel2
+            // materialLabel15
             // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(26, 473);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(132, 19);
-            this.materialLabel2.TabIndex = 1;
-            this.materialLabel2.Text = "Date d\'embauche :";
+            this.materialLabel15.AutoSize = true;
+            this.materialLabel15.Depth = 0;
+            this.materialLabel15.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel15.Location = new System.Drawing.Point(345, 331);
+            this.materialLabel15.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel15.Name = "materialLabel15";
+            this.materialLabel15.Size = new System.Drawing.Size(124, 19);
+            this.materialLabel15.TabIndex = 46;
+            this.materialLabel15.Text = "Type du compte :";
             // 
-            // materialLabel3
+            // tbx_lastname
             // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(26, 423);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(87, 19);
-            this.materialLabel3.TabIndex = 2;
-            this.materialLabel3.Text = "Téléphone :";
+            this.tbx_lastname.Location = new System.Drawing.Point(82, 34);
+            this.tbx_lastname.Name = "tbx_lastname";
+            this.tbx_lastname.Size = new System.Drawing.Size(149, 20);
+            this.tbx_lastname.TabIndex = 1;
             // 
-            // materialLabel4
+            // tbx_firstname
             // 
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(26, 370);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(47, 19);
-            this.materialLabel4.TabIndex = 3;
-            this.materialLabel4.Text = "Ville :";
+            this.tbx_firstname.Location = new System.Drawing.Point(104, 75);
+            this.tbx_firstname.Name = "tbx_firstname";
+            this.tbx_firstname.Size = new System.Drawing.Size(149, 20);
+            this.tbx_firstname.TabIndex = 2;
             // 
-            // materialLabel5
+            // tbx_login
             // 
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(26, 321);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(98, 19);
-            this.materialLabel5.TabIndex = 4;
-            this.materialLabel5.Text = "Code postal :";
+            this.tbx_login.Location = new System.Drawing.Point(86, 120);
+            this.tbx_login.Name = "tbx_login";
+            this.tbx_login.Size = new System.Drawing.Size(149, 20);
+            this.tbx_login.TabIndex = 3;
             // 
-            // materialLabel6
+            // tbx_pwd
             // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(26, 267);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(72, 19);
-            this.materialLabel6.TabIndex = 5;
-            this.materialLabel6.Text = "Adresse :";
+            this.tbx_pwd.Location = new System.Drawing.Point(140, 164);
+            this.tbx_pwd.Name = "tbx_pwd";
+            this.tbx_pwd.PasswordChar = '*';
+            this.tbx_pwd.Size = new System.Drawing.Size(149, 20);
+            this.tbx_pwd.TabIndex = 4;
             // 
-            // materialLabel7
+            // tbx_confirmationPwd
             // 
-            this.materialLabel7.AutoSize = true;
-            this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel7.Location = new System.Drawing.Point(26, 214);
-            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(209, 19);
-            this.materialLabel7.TabIndex = 6;
-            this.materialLabel7.Text = "Comfirmation mot de passe : ";
+            this.tbx_confirmationPwd.Location = new System.Drawing.Point(241, 215);
+            this.tbx_confirmationPwd.Name = "tbx_confirmationPwd";
+            this.tbx_confirmationPwd.PasswordChar = '*';
+            this.tbx_confirmationPwd.Size = new System.Drawing.Size(149, 20);
+            this.tbx_confirmationPwd.TabIndex = 5;
             // 
-            // materialLabel8
+            // tbx_address
             // 
-            this.materialLabel8.AutoSize = true;
-            this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel8.Location = new System.Drawing.Point(26, 163);
-            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(108, 19);
-            this.materialLabel8.TabIndex = 7;
-            this.materialLabel8.Text = "Mot de passe :";
+            this.tbx_address.Location = new System.Drawing.Point(104, 268);
+            this.tbx_address.Name = "tbx_address";
+            this.tbx_address.Size = new System.Drawing.Size(149, 20);
+            this.tbx_address.TabIndex = 6;
             // 
-            // materialLabel9
+            // tbx_postalCode
             // 
-            this.materialLabel9.AutoSize = true;
-            this.materialLabel9.Depth = 0;
-            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel9.Location = new System.Drawing.Point(26, 119);
-            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel9.Name = "materialLabel9";
-            this.materialLabel9.Size = new System.Drawing.Size(54, 19);
-            this.materialLabel9.TabIndex = 8;
-            this.materialLabel9.Text = "Login :";
+            this.tbx_postalCode.Location = new System.Drawing.Point(130, 322);
+            this.tbx_postalCode.Name = "tbx_postalCode";
+            this.tbx_postalCode.Size = new System.Drawing.Size(149, 20);
+            this.tbx_postalCode.TabIndex = 7;
             // 
-            // materialLabel10
+            // tbx_city
             // 
-            this.materialLabel10.AutoSize = true;
-            this.materialLabel10.Depth = 0;
-            this.materialLabel10.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel10.Location = new System.Drawing.Point(26, 74);
-            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel10.Name = "materialLabel10";
-            this.materialLabel10.Size = new System.Drawing.Size(69, 19);
-            this.materialLabel10.TabIndex = 9;
-            this.materialLabel10.Text = "Prénom :";
+            this.tbx_city.Location = new System.Drawing.Point(79, 371);
+            this.tbx_city.Name = "tbx_city";
+            this.tbx_city.Size = new System.Drawing.Size(149, 20);
+            this.tbx_city.TabIndex = 8;
             // 
-            // materialLabel11
+            // tbx_phone
             // 
-            this.materialLabel11.AutoSize = true;
-            this.materialLabel11.Depth = 0;
-            this.materialLabel11.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel11.Location = new System.Drawing.Point(345, 370);
-            this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel11.Name = "materialLabel11";
-            this.materialLabel11.Size = new System.Drawing.Size(63, 19);
-            this.materialLabel11.TabIndex = 10;
-            this.materialLabel11.Text = "Région :";
+            this.tbx_phone.Location = new System.Drawing.Point(119, 424);
+            this.tbx_phone.Name = "tbx_phone";
+            this.tbx_phone.Size = new System.Drawing.Size(149, 20);
+            this.tbx_phone.TabIndex = 9;
             // 
-            // materialLabel12
+            // materialLabel13
             // 
-            this.materialLabel12.AutoSize = true;
-            this.materialLabel12.Depth = 0;
-            this.materialLabel12.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel12.Location = new System.Drawing.Point(345, 409);
-            this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel12.Name = "materialLabel12";
-            this.materialLabel12.Size = new System.Drawing.Size(59, 19);
-            this.materialLabel12.TabIndex = 11;
-            this.materialLabel12.Text = "Activé :";
+            this.materialLabel13.AutoSize = true;
+            this.materialLabel13.Depth = 0;
+            this.materialLabel13.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel13.Location = new System.Drawing.Point(238, 473);
+            this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel13.Name = "materialLabel13";
+            this.materialLabel13.Size = new System.Drawing.Size(15, 19);
+            this.materialLabel13.TabIndex = 12;
+            this.materialLabel13.Text = "/";
             // 
-            // btn_createAccountConfirmation
+            // materialLabel14
             // 
-            this.btn_createAccountConfirmation.Location = new System.Drawing.Point(487, 454);
-            this.btn_createAccountConfirmation.Name = "btn_createAccountConfirmation";
-            this.btn_createAccountConfirmation.Size = new System.Drawing.Size(139, 60);
-            this.btn_createAccountConfirmation.TabIndex = 12;
-            this.btn_createAccountConfirmation.Text = "CRÉER";
-            this.btn_createAccountConfirmation.UseVisualStyleBackColor = true;
-            this.btn_createAccountConfirmation.Click += new System.EventHandler(this.btn_createAccountConfirmation_Click);
+            this.materialLabel14.AutoSize = true;
+            this.materialLabel14.Depth = 0;
+            this.materialLabel14.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel14.Location = new System.Drawing.Point(192, 474);
+            this.materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel14.Name = "materialLabel14";
+            this.materialLabel14.Size = new System.Drawing.Size(15, 19);
+            this.materialLabel14.TabIndex = 11;
+            this.materialLabel14.Text = "/";
             // 
-            // cbx_activeAccount
+            // tbx_hireDateYear
             // 
-            this.cbx_activeAccount.AutoSize = true;
-            this.cbx_activeAccount.Depth = 0;
-            this.cbx_activeAccount.Font = new System.Drawing.Font("Roboto", 10F);
-            this.cbx_activeAccount.ForeColor = System.Drawing.Color.Transparent;
-            this.cbx_activeAccount.Location = new System.Drawing.Point(407, 405);
-            this.cbx_activeAccount.Margin = new System.Windows.Forms.Padding(0);
-            this.cbx_activeAccount.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.cbx_activeAccount.MouseState = MaterialSkin.MouseState.HOVER;
-            this.cbx_activeAccount.Name = "cbx_activeAccount";
-            this.cbx_activeAccount.Ripple = true;
-            this.cbx_activeAccount.Size = new System.Drawing.Size(26, 30);
-            this.cbx_activeAccount.TabIndex = 13;
-            this.cbx_activeAccount.UseVisualStyleBackColor = true;
+            this.tbx_hireDateYear.Location = new System.Drawing.Point(257, 473);
+            this.tbx_hireDateYear.Name = "tbx_hireDateYear";
+            this.tbx_hireDateYear.Size = new System.Drawing.Size(45, 20);
+            this.tbx_hireDateYear.TabIndex = 13;
+            // 
+            // tbx_hireDateMonth
+            // 
+            this.tbx_hireDateMonth.Location = new System.Drawing.Point(208, 473);
+            this.tbx_hireDateMonth.Name = "tbx_hireDateMonth";
+            this.tbx_hireDateMonth.Size = new System.Drawing.Size(27, 20);
+            this.tbx_hireDateMonth.TabIndex = 12;
+            // 
+            // tbx_hireDateDay
+            // 
+            this.tbx_hireDateDay.Location = new System.Drawing.Point(165, 473);
+            this.tbx_hireDateDay.Name = "tbx_hireDateDay";
+            this.tbx_hireDateDay.Size = new System.Drawing.Size(27, 20);
+            this.tbx_hireDateDay.TabIndex = 10;
             // 
             // cbx_district
             // 
@@ -494,133 +399,273 @@
             this.cbx_district.Location = new System.Drawing.Point(405, 371);
             this.cbx_district.Name = "cbx_district";
             this.cbx_district.Size = new System.Drawing.Size(221, 21);
-            this.cbx_district.TabIndex = 14;
+            this.cbx_district.TabIndex = 15;
             // 
-            // materialLabel13
+            // cbx_activeAccount
             // 
-            this.materialLabel13.AutoSize = true;
-            this.materialLabel13.Depth = 0;
-            this.materialLabel13.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel13.Location = new System.Drawing.Point(238, 473);
-            this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel13.Name = "materialLabel13";
-            this.materialLabel13.Size = new System.Drawing.Size(15, 19);
-            this.materialLabel13.TabIndex = 36;
-            this.materialLabel13.Text = "/";
+            this.cbx_activeAccount.AutoSize = true;
+            this.cbx_activeAccount.Depth = 0;
+            this.cbx_activeAccount.Font = new System.Drawing.Font("Roboto", 10F);
+            this.cbx_activeAccount.ForeColor = System.Drawing.Color.Transparent;
+            this.cbx_activeAccount.Location = new System.Drawing.Point(407, 405);
+            this.cbx_activeAccount.Margin = new System.Windows.Forms.Padding(0);
+            this.cbx_activeAccount.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.cbx_activeAccount.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cbx_activeAccount.Name = "cbx_activeAccount";
+            this.cbx_activeAccount.Ripple = true;
+            this.cbx_activeAccount.Size = new System.Drawing.Size(26, 30);
+            this.cbx_activeAccount.TabIndex = 16;
+            this.cbx_activeAccount.UseVisualStyleBackColor = true;
             // 
-            // materialLabel14
+            // btn_createAccountConfirmation
             // 
-            this.materialLabel14.AutoSize = true;
-            this.materialLabel14.Depth = 0;
-            this.materialLabel14.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel14.Location = new System.Drawing.Point(192, 474);
-            this.materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel14.Name = "materialLabel14";
-            this.materialLabel14.Size = new System.Drawing.Size(15, 19);
-            this.materialLabel14.TabIndex = 35;
-            this.materialLabel14.Text = "/";
+            this.btn_createAccountConfirmation.Location = new System.Drawing.Point(487, 454);
+            this.btn_createAccountConfirmation.Name = "btn_createAccountConfirmation";
+            this.btn_createAccountConfirmation.Size = new System.Drawing.Size(139, 60);
+            this.btn_createAccountConfirmation.TabIndex = 17;
+            this.btn_createAccountConfirmation.Text = "CRÉER";
+            this.btn_createAccountConfirmation.UseVisualStyleBackColor = true;
             // 
-            // tbx_hireDateYear
+            // materialLabel12
             // 
-            this.tbx_hireDateYear.Location = new System.Drawing.Point(257, 473);
-            this.tbx_hireDateYear.Name = "tbx_hireDateYear";
-            this.tbx_hireDateYear.Size = new System.Drawing.Size(45, 20);
-            this.tbx_hireDateYear.TabIndex = 34;
+            this.materialLabel12.AutoSize = true;
+            this.materialLabel12.Depth = 0;
+            this.materialLabel12.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel12.Location = new System.Drawing.Point(345, 409);
+            this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel12.Name = "materialLabel12";
+            this.materialLabel12.Size = new System.Drawing.Size(59, 19);
+            this.materialLabel12.TabIndex = 11;
+            this.materialLabel12.Text = "Activé :";
             // 
-            // tbx_hireDateMonth
+            // materialLabel11
             // 
-            this.tbx_hireDateMonth.Location = new System.Drawing.Point(208, 473);
-            this.tbx_hireDateMonth.Name = "tbx_hireDateMonth";
-            this.tbx_hireDateMonth.Size = new System.Drawing.Size(27, 20);
-            this.tbx_hireDateMonth.TabIndex = 33;
+            this.materialLabel11.AutoSize = true;
+            this.materialLabel11.Depth = 0;
+            this.materialLabel11.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel11.Location = new System.Drawing.Point(345, 370);
+            this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel11.Name = "materialLabel11";
+            this.materialLabel11.Size = new System.Drawing.Size(63, 19);
+            this.materialLabel11.TabIndex = 10;
+            this.materialLabel11.Text = "Région :";
             // 
-            // tbx_hireDateDay
+            // materialLabel10
             // 
-            this.tbx_hireDateDay.Location = new System.Drawing.Point(165, 473);
-            this.tbx_hireDateDay.Name = "tbx_hireDateDay";
-            this.tbx_hireDateDay.Size = new System.Drawing.Size(27, 20);
-            this.tbx_hireDateDay.TabIndex = 32;
+            this.materialLabel10.AutoSize = true;
+            this.materialLabel10.Depth = 0;
+            this.materialLabel10.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel10.Location = new System.Drawing.Point(26, 74);
+            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel10.Name = "materialLabel10";
+            this.materialLabel10.Size = new System.Drawing.Size(69, 19);
+            this.materialLabel10.TabIndex = 9;
+            this.materialLabel10.Text = "Prénom :";
             // 
-            // tbx_phone
+            // materialLabel9
             // 
-            this.tbx_phone.Location = new System.Drawing.Point(119, 424);
-            this.tbx_phone.Name = "tbx_phone";
-            this.tbx_phone.Size = new System.Drawing.Size(149, 20);
-            this.tbx_phone.TabIndex = 37;
+            this.materialLabel9.AutoSize = true;
+            this.materialLabel9.Depth = 0;
+            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel9.Location = new System.Drawing.Point(26, 119);
+            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel9.Name = "materialLabel9";
+            this.materialLabel9.Size = new System.Drawing.Size(54, 19);
+            this.materialLabel9.TabIndex = 8;
+            this.materialLabel9.Text = "Login :";
             // 
-            // tbx_city
+            // materialLabel8
             // 
-            this.tbx_city.Location = new System.Drawing.Point(79, 371);
-            this.tbx_city.Name = "tbx_city";
-            this.tbx_city.Size = new System.Drawing.Size(149, 20);
-            this.tbx_city.TabIndex = 38;
+            this.materialLabel8.AutoSize = true;
+            this.materialLabel8.Depth = 0;
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel8.Location = new System.Drawing.Point(26, 163);
+            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel8.Name = "materialLabel8";
+            this.materialLabel8.Size = new System.Drawing.Size(108, 19);
+            this.materialLabel8.TabIndex = 7;
+            this.materialLabel8.Text = "Mot de passe :";
             // 
-            // tbx_postalCode
+            // materialLabel7
             // 
-            this.tbx_postalCode.Location = new System.Drawing.Point(130, 322);
-            this.tbx_postalCode.Name = "tbx_postalCode";
-            this.tbx_postalCode.Size = new System.Drawing.Size(149, 20);
-            this.tbx_postalCode.TabIndex = 39;
+            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Depth = 0;
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel7.Location = new System.Drawing.Point(26, 214);
+            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel7.Name = "materialLabel7";
+            this.materialLabel7.Size = new System.Drawing.Size(209, 19);
+            this.materialLabel7.TabIndex = 6;
+            this.materialLabel7.Text = "Comfirmation mot de passe : ";
             // 
-            // tbx_address
+            // materialLabel6
             // 
-            this.tbx_address.Location = new System.Drawing.Point(104, 268);
-            this.tbx_address.Name = "tbx_address";
-            this.tbx_address.Size = new System.Drawing.Size(149, 20);
-            this.tbx_address.TabIndex = 40;
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel6.Location = new System.Drawing.Point(26, 267);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(72, 19);
+            this.materialLabel6.TabIndex = 5;
+            this.materialLabel6.Text = "Adresse :";
             // 
-            // tbx_confirmationPwd
+            // materialLabel5
             // 
-            this.tbx_confirmationPwd.Location = new System.Drawing.Point(241, 215);
-            this.tbx_confirmationPwd.Name = "tbx_confirmationPwd";
-            this.tbx_confirmationPwd.PasswordChar = '*';
-            this.tbx_confirmationPwd.Size = new System.Drawing.Size(149, 20);
-            this.tbx_confirmationPwd.TabIndex = 41;
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(26, 321);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(98, 19);
+            this.materialLabel5.TabIndex = 4;
+            this.materialLabel5.Text = "Code postal :";
             // 
-            // tbx_pwd
+            // materialLabel4
             // 
-            this.tbx_pwd.Location = new System.Drawing.Point(140, 164);
-            this.tbx_pwd.Name = "tbx_pwd";
-            this.tbx_pwd.PasswordChar = '*';
-            this.tbx_pwd.Size = new System.Drawing.Size(149, 20);
-            this.tbx_pwd.TabIndex = 42;
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(26, 370);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(47, 19);
+            this.materialLabel4.TabIndex = 3;
+            this.materialLabel4.Text = "Ville :";
             // 
-            // tbx_login
+            // materialLabel3
             // 
-            this.tbx_login.Location = new System.Drawing.Point(86, 120);
-            this.tbx_login.Name = "tbx_login";
-            this.tbx_login.Size = new System.Drawing.Size(149, 20);
-            this.tbx_login.TabIndex = 43;
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(26, 423);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(87, 19);
+            this.materialLabel3.TabIndex = 2;
+            this.materialLabel3.Text = "Téléphone :";
             // 
-            // tbx_firstname
+            // materialLabel2
             // 
-            this.tbx_firstname.Location = new System.Drawing.Point(104, 75);
-            this.tbx_firstname.Name = "tbx_firstname";
-            this.tbx_firstname.Size = new System.Drawing.Size(149, 20);
-            this.tbx_firstname.TabIndex = 44;
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(26, 473);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(132, 19);
+            this.materialLabel2.TabIndex = 1;
+            this.materialLabel2.Text = "Date d\'embauche :";
             // 
-            // tbx_lastname
+            // materialLabel1
             // 
-            this.tbx_lastname.Location = new System.Drawing.Point(82, 34);
-            this.tbx_lastname.Name = "tbx_lastname";
-            this.tbx_lastname.Size = new System.Drawing.Size(149, 20);
-            this.tbx_lastname.TabIndex = 45;
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(26, 33);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(50, 19);
+            this.materialLabel1.TabIndex = 0;
+            this.materialLabel1.Text = "Nom :";
+            // 
+            // gbx_researchAccount
+            // 
+            this.gbx_researchAccount.Controls.Add(this.btn_researchAccount);
+            this.gbx_researchAccount.Controls.Add(this.tbx_researchAccount);
+            this.gbx_researchAccount.Controls.Add(this.label2);
+            this.gbx_researchAccount.Location = new System.Drawing.Point(6, 201);
+            this.gbx_researchAccount.Name = "gbx_researchAccount";
+            this.gbx_researchAccount.Size = new System.Drawing.Size(199, 155);
+            this.gbx_researchAccount.TabIndex = 2;
+            this.gbx_researchAccount.TabStop = false;
+            this.gbx_researchAccount.Text = "Rechercher le compte à modifier";
+            this.gbx_researchAccount.Visible = false;
+            // 
+            // btn_researchAccount
+            // 
+            this.btn_researchAccount.Location = new System.Drawing.Point(20, 110);
+            this.btn_researchAccount.Name = "btn_researchAccount";
+            this.btn_researchAccount.Size = new System.Drawing.Size(152, 23);
+            this.btn_researchAccount.TabIndex = 2;
+            this.btn_researchAccount.Text = "RECHERCHER";
+            this.btn_researchAccount.UseVisualStyleBackColor = true;
+            this.btn_researchAccount.Click += new System.EventHandler(this.btn_researchAccount_Click);
+            // 
+            // tbx_researchAccount
+            // 
+            this.tbx_researchAccount.Location = new System.Drawing.Point(20, 66);
+            this.tbx_researchAccount.Name = "tbx_researchAccount";
+            this.tbx_researchAccount.Size = new System.Drawing.Size(152, 20);
+            this.tbx_researchAccount.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Login du compte à rechercher :";
+            // 
+            // btn_modifyAccount
+            // 
+            this.btn_modifyAccount.Location = new System.Drawing.Point(6, 94);
+            this.btn_modifyAccount.Name = "btn_modifyAccount";
+            this.btn_modifyAccount.Size = new System.Drawing.Size(199, 82);
+            this.btn_modifyAccount.TabIndex = 1;
+            this.btn_modifyAccount.Text = "MODIFIER UN COMPTE";
+            this.btn_modifyAccount.UseVisualStyleBackColor = true;
+            this.btn_modifyAccount.Click += new System.EventHandler(this.btn_modifyAccount_Click);
+            // 
+            // btn_createAccount
+            // 
+            this.btn_createAccount.Location = new System.Drawing.Point(6, 6);
+            this.btn_createAccount.Name = "btn_createAccount";
+            this.btn_createAccount.Size = new System.Drawing.Size(199, 82);
+            this.btn_createAccount.TabIndex = 0;
+            this.btn_createAccount.Text = "CRÉER UN COMPTE";
+            this.btn_createAccount.UseVisualStyleBackColor = true;
+            this.btn_createAccount.Click += new System.EventHandler(this.btn_createAccount_Click);
+            // 
+            // tbs_admin
+            // 
+            this.tbs_admin.BaseTabControl = this.tbc_admin;
+            this.tbs_admin.Depth = 0;
+            this.tbs_admin.Location = new System.Drawing.Point(0, 64);
+            this.tbs_admin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tbs_admin.Name = "tbs_admin";
+            this.tbs_admin.Size = new System.Drawing.Size(863, 23);
+            this.tbs_admin.TabIndex = 4;
             // 
             // gbx_modifyAccountEmployee
             // 
             this.gbx_modifyAccountEmployee.Controls.Add(this.btn_modifyAccountEmployee);
+            this.gbx_modifyAccountEmployee.Controls.Add(this.materialLabel21);
+            this.gbx_modifyAccountEmployee.Controls.Add(this.cbx_modifyTypeAccount);
             this.gbx_modifyAccountEmployee.Controls.Add(this.tbx_modifyHireDate);
             this.gbx_modifyAccountEmployee.Controls.Add(this.tbx_modifyPhone);
             this.gbx_modifyAccountEmployee.Controls.Add(this.tbx_modifyCity);
             this.gbx_modifyAccountEmployee.Controls.Add(this.tbx_modifyPostalCode);
             this.gbx_modifyAccountEmployee.Controls.Add(this.tbx_modifyAddress);
-            this.gbx_modifyAccountEmployee.Controls.Add(this.materialLabel15);
             this.gbx_modifyAccountEmployee.Controls.Add(this.materialLabel16);
             this.gbx_modifyAccountEmployee.Controls.Add(this.materialLabel17);
             this.gbx_modifyAccountEmployee.Controls.Add(this.materialLabel18);
             this.gbx_modifyAccountEmployee.Controls.Add(this.materialLabel19);
+            this.gbx_modifyAccountEmployee.Controls.Add(this.materialLabel20);
             this.gbx_modifyAccountEmployee.Controls.Add(this.tbx_modifyLogin);
             this.gbx_modifyAccountEmployee.Controls.Add(this.materialLabel22);
             this.gbx_modifyAccountEmployee.Controls.Add(this.materialLabel23);
@@ -629,10 +674,10 @@
             this.gbx_modifyAccountEmployee.Controls.Add(this.tbx_modifyLastName);
             this.gbx_modifyAccountEmployee.Controls.Add(this.materialLabel26);
             this.gbx_modifyAccountEmployee.Controls.Add(this.tbx_modifyFirstname);
-            this.gbx_modifyAccountEmployee.Location = new System.Drawing.Point(211, 6);
+            this.gbx_modifyAccountEmployee.Location = new System.Drawing.Point(209, 5);
             this.gbx_modifyAccountEmployee.Name = "gbx_modifyAccountEmployee";
             this.gbx_modifyAccountEmployee.Size = new System.Drawing.Size(526, 451);
-            this.gbx_modifyAccountEmployee.TabIndex = 46;
+            this.gbx_modifyAccountEmployee.TabIndex = 47;
             this.gbx_modifyAccountEmployee.TabStop = false;
             this.gbx_modifyAccountEmployee.Text = "Modifier un compte employé";
             this.gbx_modifyAccountEmployee.Visible = false;
@@ -642,58 +687,69 @@
             this.btn_modifyAccountEmployee.Location = new System.Drawing.Point(381, 385);
             this.btn_modifyAccountEmployee.Name = "btn_modifyAccountEmployee";
             this.btn_modifyAccountEmployee.Size = new System.Drawing.Size(139, 60);
-            this.btn_modifyAccountEmployee.TabIndex = 49;
+            this.btn_modifyAccountEmployee.TabIndex = 10;
             this.btn_modifyAccountEmployee.Text = "MODIFIER";
             this.btn_modifyAccountEmployee.UseVisualStyleBackColor = true;
-            this.btn_modifyAccountEmployee.Click += new System.EventHandler(this.btn_modifyAccountEmployee_Click);
+            // 
+            // materialLabel21
+            // 
+            this.materialLabel21.AutoSize = true;
+            this.materialLabel21.Depth = 0;
+            this.materialLabel21.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel21.Location = new System.Drawing.Point(11, 329);
+            this.materialLabel21.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel21.Name = "materialLabel21";
+            this.materialLabel21.Size = new System.Drawing.Size(124, 19);
+            this.materialLabel21.TabIndex = 51;
+            this.materialLabel21.Text = "Type de compte :";
+            // 
+            // cbx_modifyTypeAccount
+            // 
+            this.cbx_modifyTypeAccount.FormattingEnabled = true;
+            this.cbx_modifyTypeAccount.Items.AddRange(new object[] {
+            "Visiteur médical",
+            "Délégué régional",
+            "Responsable Secteur"});
+            this.cbx_modifyTypeAccount.Location = new System.Drawing.Point(139, 330);
+            this.cbx_modifyTypeAccount.Name = "cbx_modifyTypeAccount";
+            this.cbx_modifyTypeAccount.Size = new System.Drawing.Size(151, 21);
+            this.cbx_modifyTypeAccount.TabIndex = 8;
             // 
             // tbx_modifyHireDate
             // 
             this.tbx_modifyHireDate.Location = new System.Drawing.Point(149, 290);
             this.tbx_modifyHireDate.Name = "tbx_modifyHireDate";
             this.tbx_modifyHireDate.Size = new System.Drawing.Size(137, 20);
-            this.tbx_modifyHireDate.TabIndex = 48;
+            this.tbx_modifyHireDate.TabIndex = 7;
             // 
             // tbx_modifyPhone
             // 
             this.tbx_modifyPhone.Location = new System.Drawing.Point(104, 252);
             this.tbx_modifyPhone.Name = "tbx_modifyPhone";
             this.tbx_modifyPhone.Size = new System.Drawing.Size(149, 20);
-            this.tbx_modifyPhone.TabIndex = 47;
+            this.tbx_modifyPhone.TabIndex = 6;
             // 
             // tbx_modifyCity
             // 
             this.tbx_modifyCity.Location = new System.Drawing.Point(89, 218);
             this.tbx_modifyCity.Name = "tbx_modifyCity";
             this.tbx_modifyCity.Size = new System.Drawing.Size(149, 20);
-            this.tbx_modifyCity.TabIndex = 46;
+            this.tbx_modifyCity.TabIndex = 5;
             // 
             // tbx_modifyPostalCode
             // 
             this.tbx_modifyPostalCode.Location = new System.Drawing.Point(116, 183);
             this.tbx_modifyPostalCode.Name = "tbx_modifyPostalCode";
             this.tbx_modifyPostalCode.Size = new System.Drawing.Size(149, 20);
-            this.tbx_modifyPostalCode.TabIndex = 45;
+            this.tbx_modifyPostalCode.TabIndex = 4;
             // 
             // tbx_modifyAddress
             // 
             this.tbx_modifyAddress.Location = new System.Drawing.Point(89, 150);
             this.tbx_modifyAddress.Name = "tbx_modifyAddress";
             this.tbx_modifyAddress.Size = new System.Drawing.Size(149, 20);
-            this.tbx_modifyAddress.TabIndex = 44;
-            // 
-            // materialLabel15
-            // 
-            this.materialLabel15.AutoSize = true;
-            this.materialLabel15.Depth = 0;
-            this.materialLabel15.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel15.Location = new System.Drawing.Point(11, 289);
-            this.materialLabel15.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel15.Name = "materialLabel15";
-            this.materialLabel15.Size = new System.Drawing.Size(132, 19);
-            this.materialLabel15.TabIndex = 43;
-            this.materialLabel15.Text = "Date d\'embauche :";
+            this.tbx_modifyAddress.TabIndex = 3;
             // 
             // materialLabel16
             // 
@@ -701,12 +757,12 @@
             this.materialLabel16.Depth = 0;
             this.materialLabel16.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel16.Location = new System.Drawing.Point(11, 251);
+            this.materialLabel16.Location = new System.Drawing.Point(11, 289);
             this.materialLabel16.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel16.Name = "materialLabel16";
-            this.materialLabel16.Size = new System.Drawing.Size(87, 19);
-            this.materialLabel16.TabIndex = 42;
-            this.materialLabel16.Text = "Téléphone :";
+            this.materialLabel16.Size = new System.Drawing.Size(132, 19);
+            this.materialLabel16.TabIndex = 43;
+            this.materialLabel16.Text = "Date d\'embauche :";
             // 
             // materialLabel17
             // 
@@ -714,12 +770,12 @@
             this.materialLabel17.Depth = 0;
             this.materialLabel17.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel17.Location = new System.Drawing.Point(11, 217);
+            this.materialLabel17.Location = new System.Drawing.Point(11, 251);
             this.materialLabel17.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel17.Name = "materialLabel17";
-            this.materialLabel17.Size = new System.Drawing.Size(47, 19);
-            this.materialLabel17.TabIndex = 41;
-            this.materialLabel17.Text = "Ville :";
+            this.materialLabel17.Size = new System.Drawing.Size(87, 19);
+            this.materialLabel17.TabIndex = 42;
+            this.materialLabel17.Text = "Téléphone :";
             // 
             // materialLabel18
             // 
@@ -727,12 +783,12 @@
             this.materialLabel18.Depth = 0;
             this.materialLabel18.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel18.Location = new System.Drawing.Point(11, 182);
+            this.materialLabel18.Location = new System.Drawing.Point(11, 217);
             this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel18.Name = "materialLabel18";
-            this.materialLabel18.Size = new System.Drawing.Size(99, 19);
-            this.materialLabel18.TabIndex = 40;
-            this.materialLabel18.Text = "Code Postal :";
+            this.materialLabel18.Size = new System.Drawing.Size(47, 19);
+            this.materialLabel18.TabIndex = 41;
+            this.materialLabel18.Text = "Ville :";
             // 
             // materialLabel19
             // 
@@ -740,19 +796,32 @@
             this.materialLabel19.Depth = 0;
             this.materialLabel19.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel19.Location = new System.Drawing.Point(11, 149);
+            this.materialLabel19.Location = new System.Drawing.Point(11, 182);
             this.materialLabel19.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel19.Name = "materialLabel19";
-            this.materialLabel19.Size = new System.Drawing.Size(72, 19);
-            this.materialLabel19.TabIndex = 39;
-            this.materialLabel19.Text = "Adresse :";
+            this.materialLabel19.Size = new System.Drawing.Size(99, 19);
+            this.materialLabel19.TabIndex = 40;
+            this.materialLabel19.Text = "Code Postal :";
+            // 
+            // materialLabel20
+            // 
+            this.materialLabel20.AutoSize = true;
+            this.materialLabel20.Depth = 0;
+            this.materialLabel20.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel20.Location = new System.Drawing.Point(11, 149);
+            this.materialLabel20.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel20.Name = "materialLabel20";
+            this.materialLabel20.Size = new System.Drawing.Size(72, 19);
+            this.materialLabel20.TabIndex = 39;
+            this.materialLabel20.Text = "Adresse :";
             // 
             // tbx_modifyLogin
             // 
             this.tbx_modifyLogin.Location = new System.Drawing.Point(82, 112);
             this.tbx_modifyLogin.Name = "tbx_modifyLogin";
             this.tbx_modifyLogin.Size = new System.Drawing.Size(149, 20);
-            this.tbx_modifyLogin.TabIndex = 38;
+            this.tbx_modifyLogin.TabIndex = 2;
             // 
             // materialLabel22
             // 
@@ -799,14 +868,14 @@
             this.cbx_modifyActivation.Depth = 0;
             this.cbx_modifyActivation.Font = new System.Drawing.Font("Roboto", 10F);
             this.cbx_modifyActivation.ForeColor = System.Drawing.Color.Transparent;
-            this.cbx_modifyActivation.Location = new System.Drawing.Point(75, 332);
+            this.cbx_modifyActivation.Location = new System.Drawing.Point(75, 363);
             this.cbx_modifyActivation.Margin = new System.Windows.Forms.Padding(0);
             this.cbx_modifyActivation.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbx_modifyActivation.MouseState = MaterialSkin.MouseState.HOVER;
             this.cbx_modifyActivation.Name = "cbx_modifyActivation";
             this.cbx_modifyActivation.Ripple = true;
             this.cbx_modifyActivation.Size = new System.Drawing.Size(26, 30);
-            this.cbx_modifyActivation.TabIndex = 36;
+            this.cbx_modifyActivation.TabIndex = 9;
             this.cbx_modifyActivation.UseVisualStyleBackColor = true;
             // 
             // tbx_modifyLastName
@@ -814,7 +883,7 @@
             this.tbx_modifyLastName.Location = new System.Drawing.Point(82, 74);
             this.tbx_modifyLastName.Name = "tbx_modifyLastName";
             this.tbx_modifyLastName.Size = new System.Drawing.Size(149, 20);
-            this.tbx_modifyLastName.TabIndex = 33;
+            this.tbx_modifyLastName.TabIndex = 1;
             // 
             // materialLabel26
             // 
@@ -822,7 +891,7 @@
             this.materialLabel26.Depth = 0;
             this.materialLabel26.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel26.Location = new System.Drawing.Point(11, 336);
+            this.materialLabel26.Location = new System.Drawing.Point(11, 367);
             this.materialLabel26.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel26.Name = "materialLabel26";
             this.materialLabel26.Size = new System.Drawing.Size(59, 19);
@@ -834,7 +903,60 @@
             this.tbx_modifyFirstname.Location = new System.Drawing.Point(82, 35);
             this.tbx_modifyFirstname.Name = "tbx_modifyFirstname";
             this.tbx_modifyFirstname.Size = new System.Drawing.Size(149, 20);
-            this.tbx_modifyFirstname.TabIndex = 34;
+            this.tbx_modifyFirstname.TabIndex = 0;
+            // 
+            // pbx_safiLogo
+            // 
+            this.pbx_safiLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbx_safiLogo.Image")));
+            this.pbx_safiLogo.Location = new System.Drawing.Point(370, 13);
+            this.pbx_safiLogo.Name = "pbx_safiLogo";
+            this.pbx_safiLogo.Size = new System.Drawing.Size(97, 104);
+            this.pbx_safiLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_safiLogo.TabIndex = 2;
+            this.pbx_safiLogo.TabStop = false;
+            // 
+            // tpg_listAccount
+            // 
+            this.tpg_listAccount.Controls.Add(this.dgv_listAccount);
+            this.tpg_listAccount.Controls.Add(this.label3);
+            this.tpg_listAccount.Location = new System.Drawing.Point(4, 22);
+            this.tpg_listAccount.Name = "tpg_listAccount";
+            this.tpg_listAccount.Padding = new System.Windows.Forms.Padding(3);
+            this.tpg_listAccount.Size = new System.Drawing.Size(853, 532);
+            this.tpg_listAccount.TabIndex = 2;
+            this.tpg_listAccount.Text = "Liste de tous les comptes";
+            this.tpg_listAccount.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(313, 24);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Liste de tous les comptes utilisteurs :";
+            // 
+            // dgv_listAccount
+            // 
+            this.dgv_listAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_listAccount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clm_name,
+            this.clm_prenom});
+            this.dgv_listAccount.Location = new System.Drawing.Point(215, 62);
+            this.dgv_listAccount.Name = "dgv_listAccount";
+            this.dgv_listAccount.Size = new System.Drawing.Size(265, 433);
+            this.dgv_listAccount.TabIndex = 3;
+            // 
+            // clm_name
+            // 
+            this.clm_name.HeaderText = "Nom";
+            this.clm_name.Name = "clm_name";
+            // 
+            // clm_prenom
+            // 
+            this.clm_prenom.HeaderText = "Prénom";
+            this.clm_prenom.Name = "clm_prenom";
             // 
             // frm_admin
             // 
@@ -855,12 +977,16 @@
             this.tpg_dashboard.ResumeLayout(false);
             this.tpg_dashboard.PerformLayout();
             this.tpg_accounts.ResumeLayout(false);
-            this.gbx_researchAccount.ResumeLayout(false);
-            this.gbx_researchAccount.PerformLayout();
             this.gbx_createAccountEmployee.ResumeLayout(false);
             this.gbx_createAccountEmployee.PerformLayout();
+            this.gbx_researchAccount.ResumeLayout(false);
+            this.gbx_researchAccount.PerformLayout();
             this.gbx_modifyAccountEmployee.ResumeLayout(false);
             this.gbx_modifyAccountEmployee.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_safiLogo)).EndInit();
+            this.tpg_listAccount.ResumeLayout(false);
+            this.tpg_listAccount.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listAccount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -882,6 +1008,27 @@
         private System.Windows.Forms.TextBox tbx_researchAccount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox gbx_createAccountEmployee;
+        private System.Windows.Forms.ComboBox cbx_typeAccount;
+        private MaterialSkin.Controls.MaterialLabel materialLabel15;
+        private System.Windows.Forms.TextBox tbx_lastname;
+        private System.Windows.Forms.TextBox tbx_firstname;
+        private System.Windows.Forms.TextBox tbx_login;
+        private System.Windows.Forms.TextBox tbx_pwd;
+        private System.Windows.Forms.TextBox tbx_confirmationPwd;
+        private System.Windows.Forms.TextBox tbx_address;
+        private System.Windows.Forms.TextBox tbx_postalCode;
+        private System.Windows.Forms.TextBox tbx_city;
+        private System.Windows.Forms.TextBox tbx_phone;
+        private MaterialSkin.Controls.MaterialLabel materialLabel13;
+        private MaterialSkin.Controls.MaterialLabel materialLabel14;
+        private System.Windows.Forms.TextBox tbx_hireDateYear;
+        private System.Windows.Forms.TextBox tbx_hireDateMonth;
+        private System.Windows.Forms.TextBox tbx_hireDateDay;
+        private System.Windows.Forms.ComboBox cbx_district;
+        private MaterialSkin.Controls.MaterialCheckBox cbx_activeAccount;
+        private System.Windows.Forms.Button btn_createAccountConfirmation;
+        private MaterialSkin.Controls.MaterialLabel materialLabel12;
+        private MaterialSkin.Controls.MaterialLabel materialLabel11;
         private MaterialSkin.Controls.MaterialLabel materialLabel10;
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
@@ -892,37 +1039,20 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel12;
-        private MaterialSkin.Controls.MaterialLabel materialLabel11;
-        private System.Windows.Forms.Button btn_createAccountConfirmation;
-        private System.Windows.Forms.ComboBox cbx_district;
-        private MaterialSkin.Controls.MaterialCheckBox cbx_activeAccount;
-        private MaterialSkin.Controls.MaterialLabel materialLabel13;
-        private MaterialSkin.Controls.MaterialLabel materialLabel14;
-        private System.Windows.Forms.TextBox tbx_hireDateYear;
-        private System.Windows.Forms.TextBox tbx_hireDateMonth;
-        private System.Windows.Forms.TextBox tbx_hireDateDay;
-        private System.Windows.Forms.TextBox tbx_phone;
-        private System.Windows.Forms.TextBox tbx_login;
-        private System.Windows.Forms.TextBox tbx_pwd;
-        private System.Windows.Forms.TextBox tbx_confirmationPwd;
-        private System.Windows.Forms.TextBox tbx_address;
-        private System.Windows.Forms.TextBox tbx_postalCode;
-        private System.Windows.Forms.TextBox tbx_city;
-        private System.Windows.Forms.TextBox tbx_lastname;
-        private System.Windows.Forms.TextBox tbx_firstname;
         private System.Windows.Forms.GroupBox gbx_modifyAccountEmployee;
         private System.Windows.Forms.Button btn_modifyAccountEmployee;
+        private MaterialSkin.Controls.MaterialLabel materialLabel21;
+        private System.Windows.Forms.ComboBox cbx_modifyTypeAccount;
         private System.Windows.Forms.TextBox tbx_modifyHireDate;
         private System.Windows.Forms.TextBox tbx_modifyPhone;
         private System.Windows.Forms.TextBox tbx_modifyCity;
         private System.Windows.Forms.TextBox tbx_modifyPostalCode;
         private System.Windows.Forms.TextBox tbx_modifyAddress;
-        private MaterialSkin.Controls.MaterialLabel materialLabel15;
         private MaterialSkin.Controls.MaterialLabel materialLabel16;
         private MaterialSkin.Controls.MaterialLabel materialLabel17;
         private MaterialSkin.Controls.MaterialLabel materialLabel18;
         private MaterialSkin.Controls.MaterialLabel materialLabel19;
+        private MaterialSkin.Controls.MaterialLabel materialLabel20;
         private System.Windows.Forms.TextBox tbx_modifyLogin;
         private MaterialSkin.Controls.MaterialLabel materialLabel22;
         private MaterialSkin.Controls.MaterialLabel materialLabel23;
@@ -931,5 +1061,11 @@
         private System.Windows.Forms.TextBox tbx_modifyLastName;
         private MaterialSkin.Controls.MaterialLabel materialLabel26;
         private System.Windows.Forms.TextBox tbx_modifyFirstname;
+        private System.Windows.Forms.PictureBox pbx_safiLogo;
+        private System.Windows.Forms.TabPage tpg_listAccount;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dgv_listAccount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clm_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clm_prenom;
     }
 }

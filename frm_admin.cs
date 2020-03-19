@@ -52,12 +52,17 @@ namespace SafiRepay
 
         private void Frm_admin_Load(object sender, EventArgs e)
         {
-
+            List<Employee> employee = Employee.getAllEmployee();
+            foreach (Employee oneEmployee in employee)
+            {
+                dgv_listAccount.Rows.Add(oneEmployee.lastname, oneEmployee.firstname);
+            }
         }
 
         private void btn_createAccount_Click(object sender, EventArgs e)
         {
             gbx_createAccountEmployee.Visible = true;
+            gbx_researchAccount.Visible = false;
         }
 
         private void btn_modifyAccount_Click(object sender, EventArgs e)
@@ -68,7 +73,7 @@ namespace SafiRepay
 
         private void btn_researchAccount_Click(object sender, EventArgs e)
         {
-            gbx_modifyAccountEmployee.Visible = false;
+            gbx_createAccountEmployee.Visible = false;
 
             try
             {
@@ -118,6 +123,7 @@ namespace SafiRepay
             string hireDateDay = tbx_hireDateDay.Text;
             string hireDateMonth = tbx_hireDateMonth.Text;
             string hireDateYear = tbx_hireDateYear.Text;
+            int typeAccount = cbx_typeAccount.SelectedIndex + 1;
             int activation = 0;
 
             if (cbx_activeAccount.Checked == true)
@@ -139,7 +145,7 @@ namespace SafiRepay
             }
             else
             {
-                Employee createAccount = Employee.createAccountEmployee(activation, firstname, lastname, pwd, login, address, postalCode, city, phone, hireDateDay, hireDateMonth, hireDateYear, district);
+                Employee createAccount = Employee.createAccountEmployee(activation, firstname, lastname, pwd, login, address, postalCode, city, phone, hireDateDay, hireDateMonth, hireDateYear, district, typeAccount);
                 MessageBox.Show("Nouveau compte crée avec succès.");
                 gbx_createAccountEmployee.Visible = false;
             }
@@ -154,9 +160,10 @@ namespace SafiRepay
             String city = tbx_modifyCity.Text;
             String address = tbx_modifyAddress.Text;
             String phone = tbx_modifyPhone.Text;
-            int activation; 
+            int typeAccount = cbx_modifyTypeAccount.SelectedIndex + 1;
+            int activation;
 
-            if (cbx_activeAccount.Checked == true)
+            if (cbx_modifyActivation.Checked == true)
             {
                 activation = 1;
             }
@@ -165,7 +172,7 @@ namespace SafiRepay
                 activation = 0;
             }
 
-            Employee modifyAccount = Employee.modifyEmployee(login, lastname, firstname, address, city, postalCode, phone, activation);
+            Employee modifyAccount = Employee.modifyEmployee(login, lastname, firstname, address, city, postalCode, phone, activation, typeAccount);
             MessageBox.Show("Modification effectué avec succès");
             gbx_modifyAccountEmployee.Visible = false;
             gbx_researchAccount.Visible = false;

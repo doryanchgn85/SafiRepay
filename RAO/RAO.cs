@@ -72,8 +72,6 @@ namespace SafiRepay.RAO
             IRestResponse response = client.Execute(request);
             return response.Content;
         }
-
-
     }
 }
 

@@ -44,7 +44,7 @@
             this.lbl_resignerAdresseMail.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_resignerAdresseMail.Name = "lbl_resignerAdresseMail";
             this.lbl_resignerAdresseMail.Size = new System.Drawing.Size(510, 19);
-            this.lbl_resignerAdresseMail.TabIndex = 0;
+            this.lbl_resignerAdresseMail.TabIndex = 2;
             this.lbl_resignerAdresseMail.Text = "Veuillez renseigner votre adresse mail pour réinitialiser votre mot de passe";
             // 
             // tbx_reinitialiserMotDePasse
@@ -52,14 +52,14 @@
             this.tbx_reinitialiserMotDePasse.Location = new System.Drawing.Point(53, 155);
             this.tbx_reinitialiserMotDePasse.Name = "tbx_reinitialiserMotDePasse";
             this.tbx_reinitialiserMotDePasse.Size = new System.Drawing.Size(455, 20);
-            this.tbx_reinitialiserMotDePasse.TabIndex = 1;
+            this.tbx_reinitialiserMotDePasse.TabIndex = 0;
             // 
             // btn_validerReinitialiserMotDePasse
             // 
             this.btn_validerReinitialiserMotDePasse.Location = new System.Drawing.Point(221, 227);
             this.btn_validerReinitialiserMotDePasse.Name = "btn_validerReinitialiserMotDePasse";
             this.btn_validerReinitialiserMotDePasse.Size = new System.Drawing.Size(127, 54);
-            this.btn_validerReinitialiserMotDePasse.TabIndex = 2;
+            this.btn_validerReinitialiserMotDePasse.TabIndex = 1;
             this.btn_validerReinitialiserMotDePasse.Text = "&VALIDER";
             this.btn_validerReinitialiserMotDePasse.UseVisualStyleBackColor = true;
             this.btn_validerReinitialiserMotDePasse.Click += new System.EventHandler(this.Btn_validerReinitialiserMotDePasse_Click);
