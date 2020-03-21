@@ -27,10 +27,12 @@ namespace SafiRepay.RAO
         public String timespan { get; set; }
         public String token { get; set; }
         public String district_id { get; set; }
-        public String message { get; set; }
         public int activation { get; set; }
-        public String data { get; set; }
 
+        /**
+         * Auth method 
+         * Allow the connection
+         */
         public static Employee auth(String login, String password)
         {
             // Transforme la chaine de caractère du RAO en objet JSON = parser
@@ -46,6 +48,10 @@ namespace SafiRepay.RAO
             }
         }
 
+        /**
+         * CreateAcountEmployee Method
+         * It is used to create an employee with all parameters
+         */
         public static Employee createAccountEmployee(int activation, String lastname, String firstname, String pwd, String login, String address, String PC, String city, String phone, String hireDateDay, String hireDateMonth, String hireDateYear, int district, int employee_type_id)
         {
             JObject jsonParse = JObject.Parse(RAO.post("createAccountEmployee", "activation=" + activation + "&firstname=" + firstname + "&lastname=" + lastname + "&password=" + pwd + "&login=" + login + 
@@ -60,6 +66,10 @@ namespace SafiRepay.RAO
             }
         }
 
+        /**
+         * ResearchEmployee Method
+         * It is used to research an employee by is login -> after modify this employee
+         */
         public static Employee researchEmployee(String login)
         {
             JObject jsonParse = JObject.Parse(RAO.post("researchEmployee", "login=" + login));
@@ -74,15 +84,19 @@ namespace SafiRepay.RAO
             }
         }
 
+
+        /*
+         * ModifyEmployee Method
+         * It is used to change datas about an employee
+         */
         public static Employee modifyEmployee(String login, String lastname, String firstname, String address, String city, String postalCode, String phone, int activation, int employee_type_id)
         {
-            JObject jsonParse = JObject.Parse(RAO.put("modifyAccountEmployee", "login=" + login + "&lastname=" + lastname + "&firstname=" + firstname + "&address=" + address + 
+            JObject jsonparse = JObject.Parse(RAO.put("modifyAccountEmployee", "login=" + login + "&lastname=" + lastname + "&firstname=" + firstname + "&address=" + address + 
                 "&city=" + city + "&postalCode=" + postalCode + "&phone=" + phone + "&activation=" + activation + "&employee_type_id=" + employee_type_id));
-
 
             if (lastname.ToString().Length > 0)
             {
-                return JsonConvert.DeserializeObject<Employee>(jsonParse.ToString());
+                return JsonConvert.DeserializeObject<Employee>(jsonparse.ToString());
             }
             else
             {
@@ -90,6 +104,10 @@ namespace SafiRepay.RAO
             }
         }
 
+        /*
+         * GetAllEmployee Method
+         * It is used to displat all acount in the datagridview  
+         */
         public static List<Employee> getAllEmployee()
         {
             JArray jsonParse = JArray.Parse(RAO.get("allAccountsEmployees"));
@@ -105,6 +123,10 @@ namespace SafiRepay.RAO
             return employees;
         }
 
+        /**
+         * GetEmployeeTypeId Method
+         * It is used to retrieve the id of a employee with his login
+         */
         public static Employee getEmployeeTypeId(String login)
         {
             JObject jsonParse = JObject.Parse(RAO.post("role", "login=" + login));

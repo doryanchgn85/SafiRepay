@@ -15,14 +15,16 @@ namespace SafiRepay.RAO
         public int middayMeal { get; set; }
         public int relayStage { get; set; }
         public int overnight { get; set; }
-        public int kms { get; set; }
+        public decimal kms { get; set; }
         public DateTime date { get; set; }
-        public string name { get; set; }
-        public List<PackageType> data { get; set; }
 
-        public static PackageType getPackageType(int employee_id)
+        /*
+         * GetPackageType Method
+         * It is used tu get all package type price with the employee_id -> display according to the connected employee
+         */
+        public static PackageType getPackageType(int employee_id, String date)
         {
-            JObject jsonParse = JObject.Parse(RAO.post("packageType", "employee_id=" + employee_id));
+            JObject jsonParse = JObject.Parse(RAO.post("packageType", "employee_id=" + employee_id + "&date=" + date));
             if (employee_id.ToString().Length > 0)
             {
                 return JsonConvert.DeserializeObject<PackageType>(jsonParse.ToString());
@@ -33,18 +35,22 @@ namespace SafiRepay.RAO
             }
         }
 
-        public static PackageType modifyPackageType(int employee_id, int middayMeal, int relayStage, int overnight, int kms)
+        /**
+         * ModifyPackageType Method
+         * Ut is used to modify th price of a package
+         */
+        public static PackageType modifyPackageType(int employee_id, int middayMeal, int relayStage, int overnight, decimal kms)
         {
-            JObject jsonParse = JObject.Parse(RAO.put("modifyPackageType", "employee_id=" + employee_id + "&middayMeal=" + middayMeal +
-                "&relayStage=" + relayStage + "&overnight=" + overnight + "&kms=" + kms));
-            if(employee_id.ToString().Length > 0)
+            PackageType packageType = new PackageType
             {
-                return JsonConvert.DeserializeObject<PackageType>(jsonParse.ToString());
-            }
-            else
-            {
-                return null;
-            }
+                employee_id = employee_id,
+                middayMeal = middayMeal,
+                relayStage = relayStage,
+                overnight = overnight,
+                kms = kms
+            };
+
+            return RAO.Put<PackageType>("modifyPackageType", packageType);
         }
     }
 }

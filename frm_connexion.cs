@@ -25,8 +25,6 @@ namespace SafiRepay
         {
             InitializeComponent();
 
-            tbx_motDePasse.PasswordChar = '*';
-
             // Create a material theme manager and add the form to manage (this)
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -40,17 +38,24 @@ namespace SafiRepay
             );
         }
 
+        /**
+         *  Button to register on the app
+         *  Try the connection, else error message
+         */
         private void Btn_connection_Click(object sender, EventArgs e)
         {
             try
             {
+                // Get the text in the two textbox
                 string username = tbx_identifiant.Text;
                 string pwd = tbx_motDePasse.Text;
 
                 Employee userWantsConnection = Employee.auth(username, pwd);
+                // Check if textbox is different of null
                 if (userWantsConnection != null)
                 {
                     Employee getEmployeeTypeId = Employee.getEmployeeTypeId(username);
+                    // Check if the user is an administrator
                     if (getEmployeeTypeId.employee_type_id != 3)
                     {
                         Global.connectedEmployee = userWantsConnection;
@@ -65,17 +70,25 @@ namespace SafiRepay
                     }
                 }
             }
+            // Display error message
             catch
             {
                 MessageBox.Show("Connexion impossible");
             }
         }
 
+        /**
+         *  Form load
+         *  Do nothing
+         */
         private void Frm_connexion_Load(object sender, EventArgs e)
         {
              
         }
 
+        /**
+         *  Redirect on the form passwordLost
+         */
         private void Lkl_mdpOublie_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frm_motDePasseOublie motDePasseOublie = new frm_motDePasseOublie();

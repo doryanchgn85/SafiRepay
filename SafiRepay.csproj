@@ -65,12 +65,6 @@
     <Compile Include="frm_admin.Designer.cs">
       <DependentUpon>frm_admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_changerMotDePasse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_changerMotDePasse.Designer.cs">
-      <DependentUpon>frm_changerMotDePasse.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_connexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,9 +91,6 @@
     <Compile Include="RAO\Employee.cs" />
     <EmbeddedResource Include="frm_admin.resx">
       <DependentUpon>frm_admin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_changerMotDePasse.resx">
-      <DependentUpon>frm_changerMotDePasse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_connexion.resx">
       <DependentUpon>frm_connexion.cs</DependentUpon>

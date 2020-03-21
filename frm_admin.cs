@@ -36,13 +36,16 @@ namespace SafiRepay
                 TextShade.WHITE
             );
 
+            // Modify the maxLenght of some textbox
             tbx_hireDateYear.MaxLength = 4;
             tbx_hireDateMonth.MaxLength = 2;
             tbx_hireDateDay.MaxLength = 2;
-            tbx_phone.MaxLength = 10;
-            
+            tbx_phone.MaxLength = 10;   
         }
 
+        /**
+         * Close the form and disconnected the user
+         */
         private void Btn_deconnexion_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -50,6 +53,10 @@ namespace SafiRepay
             connexion.Show();
         }
 
+        /**
+         * Get all employees when the form load
+         * Display in a datagridview
+         */
         private void Frm_admin_Load(object sender, EventArgs e)
         {
             List<Employee> employee = Employee.getAllEmployee();
@@ -59,18 +66,30 @@ namespace SafiRepay
             }
         }
 
+
+        /**
+         * Open a groupbox to create an employee
+         */
         private void btn_createAccount_Click(object sender, EventArgs e)
         {
             gbx_createAccountEmployee.Visible = true;
             gbx_researchAccount.Visible = false;
+            gbx_modifyAccountEmployee.Visible = false;
         }
 
+        /**
+         * Open a groupbox to research an employee to modify it
+         */
         private void btn_modifyAccount_Click(object sender, EventArgs e)
         {
             gbx_createAccountEmployee.Visible = false;
             gbx_researchAccount.Visible = true;
         }
 
+        /**
+         * Research an employee by his login
+         * Display his informations
+         */
         private void btn_researchAccount_Click(object sender, EventArgs e)
         {
             gbx_createAccountEmployee.Visible = false;
@@ -83,7 +102,7 @@ namespace SafiRepay
                 if (userResearch != null)
                 {
                     gbx_modifyAccountEmployee.Visible = true;
-                    tbx_modifyLastName.Text = Convert.ToString(userResearch.lastname);
+                    tbx_modifyLastname.Text = Convert.ToString(userResearch.lastname);
                     tbx_modifyFirstname.Text = Convert.ToString(userResearch.firstname);
                     tbx_modifyPostalCode.Text = Convert.ToString(userResearch.postalCode);
                     tbx_modifyCity.Text = Convert.ToString(userResearch.city);
@@ -102,12 +121,46 @@ namespace SafiRepay
                     }
                 }
             }
+            // Else display a error message
             catch
             {
                 MessageBox.Show("Erreur lors de la recherche");
             }
         }
 
+        /**
+         * Button to confirm all modifications of an employee 
+         */
+        private void btn_modifyAccountEmployee_Click(object sender, EventArgs e)
+        {
+            String login = tbx_researchAccount.Text;
+            String firstname = tbx_modifyFirstname.Text;
+            String lastname = tbx_modifyLastname.Text;
+            String postalCode = tbx_modifyPostalCode.Text;
+            String city = tbx_modifyCity.Text;
+            String address = tbx_modifyAddress.Text;
+            String phone = tbx_modifyPhone.Text;
+            int typeAccount = cbx_modifyTypeAccount.SelectedIndex + 1;
+            int activation;
+
+            if (cbx_modifyActivation.Checked == true)
+            {
+                activation = 1;
+            }
+            else
+            {
+                activation = 0;
+            }
+
+            Employee modifyAccount = Employee.modifyEmployee(login, lastname, firstname, address, city, postalCode, phone, activation, typeAccount);
+            MessageBox.Show("Modification effectué avec succès");
+            gbx_modifyAccountEmployee.Visible = false;
+            gbx_researchAccount.Visible = false;
+        }
+
+        /**
+         * Button to confirm the creation of an employee
+         */
         private void btn_createAccountConfirmation_Click(object sender, EventArgs e)
         {
             string firstname = tbx_firstname.Text;
@@ -135,14 +188,17 @@ namespace SafiRepay
                 activation = 0;
             }
 
-            if (firstname == null && lastname == null && login == null && address == null && postalCode == null && city == null && phone == null)
-            {
-                MessageBox.Show("Veuillez renseigner tous les champs.");
-            }
+            // Check if the two textbox of password was the same to continue the creation
             if (pwd != pwdConfirm)
-            {
+            { 
                 MessageBox.Show("Les mots de passe saisis ne sont pas identiques.");
             }
+            // Check if the password < 8 characters
+            if (pwd.Length < 8)
+            {
+                MessageBox.Show("Votre mot de passe doit comporter au minimum 8 caractères. ");
+            }
+            // And now make the creation of the employee
             else
             {
                 Employee createAccount = Employee.createAccountEmployee(activation, firstname, lastname, pwd, login, address, postalCode, city, phone, hireDateDay, hireDateMonth, hireDateYear, district, typeAccount);
@@ -150,32 +206,7 @@ namespace SafiRepay
                 gbx_createAccountEmployee.Visible = false;
             }
         }
-
-        private void btn_modifyAccountEmployee_Click(object sender, EventArgs e)
-        {
-            String login = tbx_modifyLogin.Text;
-            String firstname = tbx_modifyFirstname.Text;
-            String lastname = tbx_modifyLastName.Text;
-            String postalCode = tbx_modifyPostalCode.Text;
-            String city = tbx_modifyCity.Text;
-            String address = tbx_modifyAddress.Text;
-            String phone = tbx_modifyPhone.Text;
-            int typeAccount = cbx_modifyTypeAccount.SelectedIndex + 1;
-            int activation;
-
-            if (cbx_modifyActivation.Checked == true)
-            {
-                activation = 1;
-            }
-            else
-            {
-                activation = 0;
-            }
-
-            Employee modifyAccount = Employee.modifyEmployee(login, lastname, firstname, address, city, postalCode, phone, activation, typeAccount);
-            MessageBox.Show("Modification effectué avec succès");
-            gbx_modifyAccountEmployee.Visible = false;
-            gbx_researchAccount.Visible = false;
-        }
     }
 }
+
+    
