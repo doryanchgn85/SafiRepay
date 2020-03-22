@@ -12,9 +12,9 @@ namespace SafiRepay.RAO
     {
         public string id { get; set; }
         public int employee_id { get; set; }
-        public int middayMeal { get; set; }
-        public int relayStage { get; set; }
-        public int overnight { get; set; }
+        public decimal middayMeal { get; set; }
+        public decimal relayStage { get; set; }
+        public decimal overnight { get; set; }
         public decimal kms { get; set; }
         public DateTime date { get; set; }
 
@@ -39,7 +39,7 @@ namespace SafiRepay.RAO
          * ModifyPackageType Method
          * Ut is used to modify th price of a package
          */
-        public static PackageType modifyPackageType(int employee_id, int middayMeal, int relayStage, int overnight, decimal kms)
+        public static PackageType modifyPackageType(int employee_id, decimal middayMeal, decimal relayStage, decimal overnight, decimal kms)
         {
             PackageType packageType = new PackageType
             {

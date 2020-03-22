@@ -103,21 +103,21 @@ namespace SafiRepay
             tbx_newOvernight.Enabled = false;
             tbx_newKms.Enabled = false;
 
-            int middayMeal = Convert.ToInt32(tbx_newMiddayMeal.Text) + Convert.ToInt32(tbx_middayMeal.Text);
-            int relayStage = Convert.ToInt32(tbx_newRelayStage.Text) + Convert.ToInt32(tbx_relayStages.Text);
-            int overnight = Convert.ToInt32(tbx_newOvernight.Text) + Convert.ToInt32(tbx_overnight.Text);
+            decimal middayMeal = Convert.ToDecimal(tbx_newMiddayMeal.Text) + Convert.ToDecimal(tbx_middayMeal.Text);
+            decimal relayStage = Convert.ToDecimal(tbx_newRelayStage.Text) + Convert.ToDecimal(tbx_relayStages.Text);
+            decimal overnight = Convert.ToDecimal(tbx_newOvernight.Text) + Convert.ToDecimal(tbx_overnight.Text);
             int employee_id = Convert.ToInt32(tbx_nbAccount.Text);
 
             CultureInfo cultureInfo = CultureInfo.GetCultureInfo("fr-FR");
 
-            decimal kms = ConvertDecimal(tbx_newKms.Text, tbx_kms.Text, cultureInfo);
+            decimal kms = ConvertDecimalKms(tbx_newKms.Text, tbx_kms.Text, cultureInfo);
 
             PackageType modifyValues = PackageType.modifyPackageType(employee_id, middayMeal, relayStage, overnight, kms);
-            
+
             this.getPrice();
 
             MessageBox.Show("Modifications prises en compte.");
-
+                
             lbl_newText.Visible = false;
             tbx_newMiddayMeal.Visible = false;
             tbx_newRelayStage.Visible = false;
@@ -161,7 +161,7 @@ namespace SafiRepay
         /**
          * Return the kms in a decimal number
          */
-        public decimal ConvertDecimal(string newKms1, string oldKms1, IFormatProvider formatProvider)
+        public decimal ConvertDecimalKms(string newValue, string oldValue, IFormatProvider formatProvider)
         {
             if (!decimal.TryParse(tbx_newKms.Text, NumberStyles.Any, formatProvider, out decimal newKms))
             {
@@ -182,6 +182,16 @@ namespace SafiRepay
         private void btn_confirmDate_Click(object sender, EventArgs e)
         {
             getPrice();
+        }
+
+        private void tbx_newKms_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 44)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

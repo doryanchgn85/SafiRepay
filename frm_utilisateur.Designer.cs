@@ -33,18 +33,19 @@
             this.tbs_user = new MaterialSkin.Controls.MaterialTabSelector();
             this.tbc_user = new MaterialSkin.Controls.MaterialTabControl();
             this.tbp_dashboard = new System.Windows.Forms.TabPage();
+            this.pbx_logoSafi = new System.Windows.Forms.PictureBox();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.tbp_sheet = new System.Windows.Forms.TabPage();
+            this.tbx_newKms = new System.Windows.Forms.TextBox();
+            this.tbx_newOvernight = new System.Windows.Forms.TextBox();
+            this.tbx_newRelayStage = new System.Windows.Forms.TextBox();
+            this.tbx_newMiddayMeal = new System.Windows.Forms.TextBox();
             this.cbx_dateSheet = new System.Windows.Forms.ComboBox();
             this.btn_confirmDate = new System.Windows.Forms.Button();
             this.lbl_month = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.lbl_newText = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.tbx_newKms = new System.Windows.Forms.TextBox();
-            this.tbx_newOvernight = new System.Windows.Forms.TextBox();
-            this.tbx_newRelayStage = new System.Windows.Forms.TextBox();
-            this.tbx_newMiddayMeal = new System.Windows.Forms.TextBox();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Confirm = new System.Windows.Forms.Button();
             this.btn_modifyParamsSheet = new System.Windows.Forms.Button();
@@ -70,12 +71,11 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.pbx_logoSafi = new System.Windows.Forms.PictureBox();
             this.tbc_user.SuspendLayout();
             this.tbp_dashboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_logoSafi)).BeginInit();
             this.tbp_sheet.SuspendLayout();
             this.tbp_profil.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_logoSafi)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_deconnexion
@@ -117,11 +117,22 @@
             this.tbp_dashboard.Controls.Add(this.materialLabel5);
             this.tbp_dashboard.Location = new System.Drawing.Point(4, 22);
             this.tbp_dashboard.Name = "tbp_dashboard";
-            this.tbp_dashboard.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbp_dashboard.Padding = new System.Windows.Forms.Padding(3);
             this.tbp_dashboard.Size = new System.Drawing.Size(933, 483);
             this.tbp_dashboard.TabIndex = 0;
             this.tbp_dashboard.Text = "Accueil";
             this.tbp_dashboard.UseVisualStyleBackColor = true;
+            // 
+            // pbx_logoSafi
+            // 
+            this.pbx_logoSafi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbx_logoSafi.Image = ((System.Drawing.Image)(resources.GetObject("pbx_logoSafi.Image")));
+            this.pbx_logoSafi.Location = new System.Drawing.Point(410, 25);
+            this.pbx_logoSafi.Name = "pbx_logoSafi";
+            this.pbx_logoSafi.Size = new System.Drawing.Size(93, 104);
+            this.pbx_logoSafi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbx_logoSafi.TabIndex = 6;
+            this.pbx_logoSafi.TabStop = false;
             // 
             // materialLabel5
             // 
@@ -138,16 +149,16 @@
             // 
             // tbp_sheet
             // 
+            this.tbp_sheet.Controls.Add(this.tbx_newKms);
+            this.tbp_sheet.Controls.Add(this.tbx_newOvernight);
+            this.tbp_sheet.Controls.Add(this.tbx_newRelayStage);
+            this.tbp_sheet.Controls.Add(this.tbx_newMiddayMeal);
             this.tbp_sheet.Controls.Add(this.cbx_dateSheet);
             this.tbp_sheet.Controls.Add(this.btn_confirmDate);
             this.tbp_sheet.Controls.Add(this.lbl_month);
             this.tbp_sheet.Controls.Add(this.materialLabel7);
             this.tbp_sheet.Controls.Add(this.lbl_newText);
             this.tbp_sheet.Controls.Add(this.materialLabel6);
-            this.tbp_sheet.Controls.Add(this.tbx_newKms);
-            this.tbp_sheet.Controls.Add(this.tbx_newOvernight);
-            this.tbp_sheet.Controls.Add(this.tbx_newRelayStage);
-            this.tbp_sheet.Controls.Add(this.tbx_newMiddayMeal);
             this.tbp_sheet.Controls.Add(this.btn_Cancel);
             this.tbp_sheet.Controls.Add(this.btn_Confirm);
             this.tbp_sheet.Controls.Add(this.btn_modifyParamsSheet);
@@ -165,11 +176,51 @@
             this.tbp_sheet.Controls.Add(this.lbl_repasMidi);
             this.tbp_sheet.Location = new System.Drawing.Point(4, 22);
             this.tbp_sheet.Name = "tbp_sheet";
-            this.tbp_sheet.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbp_sheet.Padding = new System.Windows.Forms.Padding(3);
             this.tbp_sheet.Size = new System.Drawing.Size(933, 483);
             this.tbp_sheet.TabIndex = 1;
             this.tbp_sheet.Text = "Les forfaits";
             this.tbp_sheet.UseVisualStyleBackColor = true;
+            // 
+            // tbx_newKms
+            // 
+            this.tbx_newKms.Location = new System.Drawing.Point(553, 212);
+            this.tbx_newKms.Name = "tbx_newKms";
+            this.tbx_newKms.Size = new System.Drawing.Size(94, 20);
+            this.tbx_newKms.TabIndex = 49;
+            this.tbx_newKms.Text = "0";
+            this.tbx_newKms.Visible = false;
+            this.tbx_newKms.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbx_newKms_KeyPress);
+            // 
+            // tbx_newOvernight
+            // 
+            this.tbx_newOvernight.Location = new System.Drawing.Point(553, 173);
+            this.tbx_newOvernight.Name = "tbx_newOvernight";
+            this.tbx_newOvernight.Size = new System.Drawing.Size(94, 20);
+            this.tbx_newOvernight.TabIndex = 48;
+            this.tbx_newOvernight.Text = "0";
+            this.tbx_newOvernight.Visible = false;
+            this.tbx_newOvernight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbx_newKms_KeyPress);
+            // 
+            // tbx_newRelayStage
+            // 
+            this.tbx_newRelayStage.Location = new System.Drawing.Point(553, 135);
+            this.tbx_newRelayStage.Name = "tbx_newRelayStage";
+            this.tbx_newRelayStage.Size = new System.Drawing.Size(94, 20);
+            this.tbx_newRelayStage.TabIndex = 47;
+            this.tbx_newRelayStage.Text = "0";
+            this.tbx_newRelayStage.Visible = false;
+            this.tbx_newRelayStage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbx_newKms_KeyPress);
+            // 
+            // tbx_newMiddayMeal
+            // 
+            this.tbx_newMiddayMeal.Location = new System.Drawing.Point(553, 100);
+            this.tbx_newMiddayMeal.Name = "tbx_newMiddayMeal";
+            this.tbx_newMiddayMeal.Size = new System.Drawing.Size(94, 20);
+            this.tbx_newMiddayMeal.TabIndex = 46;
+            this.tbx_newMiddayMeal.Text = "0";
+            this.tbx_newMiddayMeal.Visible = false;
+            this.tbx_newMiddayMeal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbx_newKms_KeyPress);
             // 
             // cbx_dateSheet
             // 
@@ -186,7 +237,7 @@
             "2020-11-01",
             "2020-12-01"});
             this.cbx_dateSheet.Location = new System.Drawing.Point(422, 22);
-            this.cbx_dateSheet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbx_dateSheet.Margin = new System.Windows.Forms.Padding(2);
             this.cbx_dateSheet.Name = "cbx_dateSheet";
             this.cbx_dateSheet.Size = new System.Drawing.Size(92, 21);
             this.cbx_dateSheet.TabIndex = 41;
@@ -252,38 +303,6 @@
             this.materialLabel6.Size = new System.Drawing.Size(82, 19);
             this.materialLabel6.TabIndex = 36;
             this.materialLabel6.Text = "Total mois";
-            // 
-            // tbx_newKms
-            // 
-            this.tbx_newKms.Location = new System.Drawing.Point(546, 212);
-            this.tbx_newKms.Name = "tbx_newKms";
-            this.tbx_newKms.Size = new System.Drawing.Size(94, 20);
-            this.tbx_newKms.TabIndex = 35;
-            this.tbx_newKms.Visible = false;
-            // 
-            // tbx_newOvernight
-            // 
-            this.tbx_newOvernight.Location = new System.Drawing.Point(546, 173);
-            this.tbx_newOvernight.Name = "tbx_newOvernight";
-            this.tbx_newOvernight.Size = new System.Drawing.Size(94, 20);
-            this.tbx_newOvernight.TabIndex = 34;
-            this.tbx_newOvernight.Visible = false;
-            // 
-            // tbx_newRelayStage
-            // 
-            this.tbx_newRelayStage.Location = new System.Drawing.Point(546, 135);
-            this.tbx_newRelayStage.Name = "tbx_newRelayStage";
-            this.tbx_newRelayStage.Size = new System.Drawing.Size(94, 20);
-            this.tbx_newRelayStage.TabIndex = 33;
-            this.tbx_newRelayStage.Visible = false;
-            // 
-            // tbx_newMiddayMeal
-            // 
-            this.tbx_newMiddayMeal.Location = new System.Drawing.Point(546, 100);
-            this.tbx_newMiddayMeal.Name = "tbx_newMiddayMeal";
-            this.tbx_newMiddayMeal.Size = new System.Drawing.Size(94, 20);
-            this.tbx_newMiddayMeal.TabIndex = 32;
-            this.tbx_newMiddayMeal.Visible = false;
             // 
             // btn_Cancel
             // 
@@ -468,7 +487,7 @@
             this.tbp_profil.Controls.Add(this.materialLabel4);
             this.tbp_profil.Location = new System.Drawing.Point(4, 22);
             this.tbp_profil.Name = "tbp_profil";
-            this.tbp_profil.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbp_profil.Padding = new System.Windows.Forms.Padding(3);
             this.tbp_profil.Size = new System.Drawing.Size(933, 483);
             this.tbp_profil.TabIndex = 2;
             this.tbp_profil.Text = "Mon profil";
@@ -565,17 +584,6 @@
             this.materialLabel4.TabIndex = 29;
             this.materialLabel4.Text = "Prénom :";
             // 
-            // pbx_logoSafi
-            // 
-            this.pbx_logoSafi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbx_logoSafi.Image = ((System.Drawing.Image)(resources.GetObject("pbx_logoSafi.Image")));
-            this.pbx_logoSafi.Location = new System.Drawing.Point(410, 25);
-            this.pbx_logoSafi.Name = "pbx_logoSafi";
-            this.pbx_logoSafi.Size = new System.Drawing.Size(93, 104);
-            this.pbx_logoSafi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbx_logoSafi.TabIndex = 6;
-            this.pbx_logoSafi.TabStop = false;
-            // 
             // frm_utilisateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -593,11 +601,11 @@
             this.tbc_user.ResumeLayout(false);
             this.tbp_dashboard.ResumeLayout(false);
             this.tbp_dashboard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_logoSafi)).EndInit();
             this.tbp_sheet.ResumeLayout(false);
             this.tbp_sheet.PerformLayout();
             this.tbp_profil.ResumeLayout(false);
             this.tbp_profil.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_logoSafi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -625,10 +633,6 @@
         private System.Windows.Forms.ComboBox cbx_dateSheet;
         private MaterialSkin.Controls.MaterialLabel lbl_newText;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private System.Windows.Forms.TextBox tbx_newKms;
-        private System.Windows.Forms.TextBox tbx_newOvernight;
-        private System.Windows.Forms.TextBox tbx_newRelayStage;
-        private System.Windows.Forms.TextBox tbx_newMiddayMeal;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_Confirm;
         private System.Windows.Forms.Button btn_modifyParamsSheet;
@@ -645,5 +649,9 @@
         private MaterialSkin.Controls.MaterialLabel lbl_deplacement;
         private MaterialSkin.Controls.MaterialLabel lbl_repasMidi;
         private System.Windows.Forms.PictureBox pbx_logoSafi;
+        private System.Windows.Forms.TextBox tbx_newKms;
+        private System.Windows.Forms.TextBox tbx_newOvernight;
+        private System.Windows.Forms.TextBox tbx_newRelayStage;
+        private System.Windows.Forms.TextBox tbx_newMiddayMeal;
     }
 }
