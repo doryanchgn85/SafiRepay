@@ -67,7 +67,7 @@ namespace SafiRepay.RAO
         {
             RestClient client = new RestClient();
             client.BaseUrl = new Uri(Properties.Settings.Default.routeApi);
-            //put
+            
             RestRequest request = new RestRequest(route, Method.PUT);
             if (Global.connectedEmployee != null)
             {
